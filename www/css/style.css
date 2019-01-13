@@ -81,6 +81,15 @@ line-height: 20px;
 width: 140px;
 }
 
+
+.home {
+    color: red;
+    position: absolute;
+    left: 50%;
+    top: 17%;
+}
+
+
 .text-box{
 left: 8%;
 position: absolute;
