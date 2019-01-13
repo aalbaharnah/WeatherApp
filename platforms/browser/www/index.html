@@ -8,56 +8,19 @@
 
     <title>My Weather App</title>
 
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
     <script src="js/angular.min.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="js/angular-animate.min.js"></script>
+
 </head>
 
-<body ng-controller="MyWeatherController">
-    <div class="box-container">
-
-            <!--Search box-->
-            <div class="search-box">
-                <input class="search-txt" type="text" placeholder="City ..." ng-model="cityName">
-                <a class="search-btn" ng-click="search()">
-                    <i class="fas fa-search fa-2x"></i>
-                </a>
-            </div>
-
-            <!--City name & Tempreture-->
-            <div class="text-box">
-                    <div class="cName">
-                        {{cityData}}
-                    </div>
-                    <div class="cTemp">
-                        {{cityTemp}}
-                    </div>
-            </div>
-
-            <!-- Icon -->
-            <div class="condition">
-                <img class="icon" ng-src="http:{{cityIcon}}">
-                <div class="cCond">
-                    {{ cityCondition }}
-                </div>
-            </div>
-            
-            <!-- Humidity & wind speed and clouds-->
-            <div class="down-text-box">
-                <div class="col">
-                    Humidity: <br />
-                    <div class="cHumidity"> {{cityHumidity}} </div>
-                </div>
-
-                <div class="col">
-                    Wind Speed: <br />
-                    <div class="cHumidity"> {{cityWind}} </div>
-                </div>
-            </div>
-
-    </div>
+<body>
+    <main ng-view></main>
 </body>
 
 </html>

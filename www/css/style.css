@@ -99,8 +99,44 @@ width: 55%;
 /* text-align: center; */
 display: flex;
 flex-flow: column;
-
 }
+
+/*
+.ani.ng-enter {
+    transition:1s linear all;
+    opacity:0;
+  }
+
+.ani.ng-enter.ng-enter-active {
+    opacity:1;
+  }
+  */
+
+.CityNameStyle  {
+    position: relative;
+    padding : 5%;
+    color: rgb(232, 142, 5);
+    text-transform : uppercase;
+    font-weight: 900;
+    font-size: 9vw;
+    letter-spacing: 0.1rem;
+    animation: fadeInDown 1s ease-out;
+}
+
+.CityTempStyle  {
+    line-height: 10rem;
+    padding : 5%;
+    color: #b36b00;
+    font-weight: 700;
+    font-size: 24vw;
+    letter-spacing: .1rem;
+    animation: fadeInDown 1s ease-out;
+    transition: .6s;
+    backface-visibility: hidden;
+    /* text-align: center; */
+    align-self: center;
+}
+
 
 .condition{
 position: absolute;
@@ -131,6 +167,15 @@ font-size: large;
   top: 74%;
   display: flex;
   flex-flow: row;
+}
+
+.CityHumidityStyle {
+    color: #b36b00;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: .2rem;
+    animation: fadeInDown 1s ease-out;
+    backface-visibility: hidden;
 }
 
 .col{
