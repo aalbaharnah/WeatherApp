@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Jan 13 09:28:33 AST 2019
+#Sun Jan 13 14:31:47 AST 2019
 4.path=www/img/logo.png
 13.baseType=DIRECTORY
 8.set=ASSET
@@ -11,7 +11,8 @@
 8.path=www/cordova-js-src/exec.js
 12.path=www/cordova-js-src/platform.js
 3.base=/Users/aalbaharnah/Challenge/WeatherApp/platforms/android/app/build/intermediates/assets/debug
-14.path=www/css/style.css
+14.path=www/templates/data.html
+15.set=ASSET
 4.set=ASSET
 5.base=/Users/aalbaharnah/Challenge/WeatherApp/platforms/android/app/build/intermediates/assets/debug
 7.base=/Users/aalbaharnah/Challenge/WeatherApp/platforms/android/app/build/intermediates/assets/debug
@@ -21,6 +22,7 @@
 1.baseType=DIRECTORY
 11.set=ASSET
 0.set=ASSET
+15.base=/Users/aalbaharnah/Challenge/WeatherApp/platforms/android/app/build/intermediates/assets/debug
 14.baseType=DIRECTORY
 6.baseType=DIRECTORY
 7.set=ASSET
@@ -28,6 +30,7 @@
 3.set=ASSET
 2.baseType=DIRECTORY
 10.baseType=DIRECTORY
+15.baseType=DIRECTORY
 1.path=www/js/angular.min.js
 7.baseType=DIRECTORY
 3.path=www/cordova.js
@@ -42,6 +45,7 @@
 13.path=www/cordova-js-src/android/promptbasednativeapi.js
 11.baseType=DIRECTORY
 4.base=/Users/aalbaharnah/Challenge/WeatherApp/platforms/android/app/build/intermediates/assets/debug
+15.path=www/css/style.css
 3.baseType=DIRECTORY
 6.base=/Users/aalbaharnah/Challenge/WeatherApp/platforms/android/app/build/intermediates/assets/debug
 10.base=/Users/aalbaharnah/Challenge/WeatherApp/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
@@ -52,7 +56,7 @@
 12.base=/Users/aalbaharnah/Challenge/WeatherApp/platforms/android/app/build/intermediates/assets/debug
 14.base=/Users/aalbaharnah/Challenge/WeatherApp/platforms/android/app/build/intermediates/assets/debug
 9.set=ASSET
-count=15
+count=16
 12.baseType=DIRECTORY
 4.baseType=DIRECTORY
 5.set=ASSET

@@ -1,26 +1,20 @@
-var app = angular.module("MyWeatherApp", []);
+var app = angular.module("MyWeatherApp", ['ngRoute']);
 
-/*
+
 app.config(function ($routeProvider) {
     $routeProvider
     .when('/',
     {
         controller: 'MyWeatherController',
-        templateUrl: 'searchbar.html'
-    })
-    .when('/data',
-    {
-        controller: 'MyWeatherController',
-        templateUrl: 'data.html'
+        templateUrl: 'templates/data.html'
     })
 });
-*/
 
 app.controller("MyWeatherController", function ($scope, $http) {
 
     localStorage.setItem('name', 'qatif');
     console.log(localStorage.getItem('name'));
-    
+
     // Function to search by city name.
     $scope.cityName = '';
     $scope.search = function () {
@@ -41,7 +35,6 @@ app.controller("MyWeatherController", function ($scope, $http) {
         navigator.geolocation.getCurrentPosition((function(position){
             console.log(position.coords.longitude.toFixed(6) + '    ' + position.coords.latitude.toFixed(6));
             
-
             // Using Google API.
             $http.get('https://maps.googleapis.com/maps/api/geocode/json?latlng='+position.coords.latitude.toFixed(6)+','+position.coords.longitude.toFixed(6)+'&key=AIzaSyDzgPZGicdxjiHLFVem3lDIxR_XAVSEZus').then(function(loc){
                 console.log(loc.data.results);
@@ -95,11 +88,6 @@ app.controller("MyWeatherController", function ($scope, $http) {
         "font-weight": "900",
         "font-size": "9vw",
         "letter-spacing": ".1rem",
-        "backface-visibility": "hidden",
-        "-webkit-transition": "content 2s ease-out",
-        "-moz-transition": "content 2s ease-out",
-        "-o-transition": "content 2s ease-out",
-        "transition": "content 2s ease-out"
     }
 
     $scope.CityTempStyle = {
