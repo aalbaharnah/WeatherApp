@@ -1,0 +1,146 @@
+* {
+  font-size: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+
+body {
+position: inherit;
+height: 100vh;
+background-color: #ffe6e6;
+animation: fadeIn 0.4s ease-in-out;
+backface-visibility: hidden;
+font-family: 'Work Sans', sans-serif;
+box-sizing: border-box;
+}
+
+.box-container {
+position: absolute;
+display: flex;
+/* margin: inherit; */
+top: 60%;
+left: 50%;
+transform: translate(-50%, -60%);
+border-radius: 20px;
+width: 90%;
+height: 93%;
+box-shadow: 0 1.7rem 9rem rgba(11, 49, 38, 0.18);
+background: white;
+-webkit-transition: background-color 2s ease-out;
+-moz-transition: background-color 2s ease-out;
+-o-transition: background-color 2s ease-out;
+transition: background-color 2s ease-out;
+}
+
+.search-box:hover > .search-txt{
+width: 160px;
+padding: 0 6px;
+background: #f2f2f2;
+border-radius: 40px;
+color: black;
+}
+
+.search-box {
+position: relative;
+top: 10%;
+left: 50%;
+transform: translate(-50%, -50%);
+background: #2f3640;
+height: 20px;
+border-radius: 40px;
+padding: 10px;
+width: 220px;
+display: flex;
+justify-content: space-between;
+}
+
+.search-btn {
+color: #f2f2f2;
+float: right;
+width: 40px;
+height: 20px;
+border-radius: 50%;
+background: #2f3640;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 75.5%;
+}
+
+.search-txt {
+border: none;
+background: none;
+outline: none;
+float: left;
+padding: 0;
+color: white;
+font-size: 16px;
+transition: 0.4s;
+line-height: 20px;
+width: 140px;
+}
+
+.text-box{
+left: 8%;
+position: absolute;
+top: 33%;
+height: 40%;
+width: 55%;
+/* text-align: center; */
+display: flex;
+flex-flow: column;
+
+}
+
+.condition{
+position: absolute;
+left: 53%;
+top: 33%;
+height: 40%;
+width: 40%;
+padding-top: 5%;
+text-align: center;
+}
+
+.icon{
+height: 35%;
+position: relative;
+}
+
+.cCond{
+position: relative;
+padding: 5%;
+color: black;
+font-size: large;
+}
+
+
+.down-text-box{
+  position: absolute;
+  width: 100%;
+  top: 74%;
+  display: flex;
+  flex-flow: row;
+}
+
+.col{
+float: left;
+width: 33.33%;
+padding: 20px;
+text-align: center;
+position: relative;
+margin: auto;
+}
+
+
+@keyframes fadeIn {
+0%{
+    opacity: 0;
+    transform: scale(0)
+}
+
+100%{
+    transform: scale(1);
+}
+}

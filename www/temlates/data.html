@@ -1,0 +1,30 @@
+<!--City name & Tempreture-->
+<div class="text-box">
+    <div ng-style="CityNameStyle">
+        {{cityData}}
+    </div>
+    <div ng-style="CityTempStyle">
+        {{cityTemp}}
+    </div>
+</div>
+
+<!-- Icon -->
+<div class="condition">
+    <img class="icon" ng-src="http:{{cityIcon}}">
+    <div class="cCond">
+        {{ cityCondition }}
+    </div>
+</div>
+
+<!-- Humidity & wind speed and clouds-->
+<div class="down-text-box">
+    <div class="col">
+        Humidity: <br />
+        <div ng-style="CityHumidityStyle"> {{cityHumidity}} </div>
+    </div>
+
+    <div class="col">
+        Wind Speed: <br />
+        <div ng-style="CityHumidityStyle"> {{cityWind}} </div>
+    </div>
+</div>
