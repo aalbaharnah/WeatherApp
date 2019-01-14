@@ -1,0 +1,25 @@
+<div ng-controller="MyWeatherController">
+    <div class="box-container" ">
+
+        <p>
+            <a href=" #!"><i class="fas fa-plus-circle fa-2x"></i></a>
+        </p>
+
+        <!--Search box-->
+        <div class="search-box">
+            <input class="search-txt" type="text" placeholder="Add a city .." ng-model="addIt">
+            <a class="search-btn" ng-click="addCity()">
+                <i class="fas fa-plus fa-2x"></i>
+            </a>
+        </div>
+
+        <ul>
+            <li ng-repeat="x in cities">
+                {{x}}
+                <span ng-click="removeItem($index)" style="cursor:pointer;">x</span>
+            </li>
+        </ul>
+        <p>{{errortext}}</p>
+
+    </div>
+</div>

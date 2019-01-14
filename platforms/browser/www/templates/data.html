@@ -1,51 +1,56 @@
-
 <div ng-controller="MyWeatherController">
     <div class="box-container" ng-controller="MyWeatherController" ng-style="is_it_day()">
 
-            <!--Search box-->
-            <div class="search-box">
-                <input class="search-txt" type="text" placeholder="City ..." ng-model="cityName">
-                <a class="search-btn" ng-click="search()">
-                    <i class="fas fa-search fa-2x"></i>
-                </a>
-            </div>
-
-            <a class="home" ng-click="getMeHome()">
-                <i class="fas fa-home fa-2x"></i>
+        <p>
+            <a href="#!search">
+                <i class="fas fa-plus-circle fa-2x"></i>
             </a>
+        </p>
 
-            <!--City name & Tempreture-->
-            <div class="text-box">
-                <div class="ani">
-                        <div class="CityNameStyle">
-                            {{cityData}}
-                        </div>
-                        <div class="CityTempStyle">
-                            {{cityTemp}}
-                        </div>
+        <!--Search box-->
+        <div class="search-box">
+            <input class="search-txt" type="text" placeholder="City ..." ng-model="cityName">
+            <a class="search-btn" ng-click="search()">
+                <i class="fas fa-search fa-2x"></i>
+            </a>
+        </div>
+
+        <a class="home" ng-click="getMeHome()">
+            <i class="fas fa-home fa-2x"></i>
+        </a>
+
+        <!--City name & Tempreture-->
+        <div class="text-box">
+            <div class="ani">
+                <div ng-class="{'CityNameStyle':loading}">
+                    {{cityData}}
+                </div>
+                <div class="CityTempStyle">
+                    {{cityTemp}}
                 </div>
             </div>
+        </div>
 
-            <!-- Icon -->
-            <div class="condition">
-                <img class="icon" ng-src="http:{{cityIcon}}">
-                <div class="cCond">
-                    {{ cityCondition }}
-                </div>
+        <!-- Icon -->
+        <div class="condition">
+            <img class="icon" ng-src="http:{{cityIcon}}">
+            <div class="cCond">
+                {{ cityCondition }}
             </div>
-            
-            <!-- Humidity & wind speed and clouds-->
-            <div class="down-text-box">
-                <div class="col">
-                    Humidity: <br />
-                    <div class="CityHumidityStyle"> {{cityHumidity}} </div>
-                </div>
+        </div>
 
-                <div class="col">
-                    Wind Speed: <br />
-                    <div class="CityHumidityStyle"> {{cityWind}} </div>
-                </div>
+        <!-- Humidity & wind speed and clouds-->
+        <div class="down-text-box">
+            <div class="col">
+                Humidity: <br />
+                <div class="CityHumidityStyle"> {{cityHumidity}} </div>
             </div>
+
+            <div class="col">
+                Wind Speed: <br />
+                <div class="CityHumidityStyle"> {{cityWind}} </div>
+            </div>
+        </div>
 
     </div>
 </div>
