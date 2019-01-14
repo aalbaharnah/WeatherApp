@@ -1,17 +1,42 @@
-var app = angular.module("MyWeatherApp", ['ngRoute', 'ngAnimate']);
+var app = angular.module("MyWeatherApp", ['ui.router', 'ngAnimate']);
 
 // Routing to the main body page.
-app.config(function ($routeProvider) {
-    $routeProvider
-        .when('/', {
+/*
+app.config(function ($stateProvider) {
+    $stateProvider
+        .state('main',{
+            url:'/', 
             controller: 'MyWeatherController',
             templateUrl: 'templates/data.html'
         })
-        .when('/search', {
+        .state('favsity', {
+            url:'/search', 
             controller: 'MyWeatherController',
             templateUrl: 'templates/search.html'
         })
 });
+*/
+
+app.config(function($stateProvider, $urlRouterProvider) {
+
+    $urlRouterProvider.otherwise('/main');
+
+    $stateProvider
+
+        // HOME STATES AND NESTED VIEWS ========================================
+        .state('main', {
+            url: '/main',
+            templateUrl: 'templates/data.html'
+        })
+
+        .state('favsity', {
+            url:'/search', 
+            controller: 'MyWeatherController',
+            templateUrl: 'templates/search.html'
+        })
+
+});
+
 
 app.controller("MyWeatherController", function ($scope, $http, $timeout) {
 

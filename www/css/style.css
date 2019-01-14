@@ -37,6 +37,7 @@ body {
     position: absolute;
     top: 2%;
     right: 3%;
+    color: #2f3640;
 }
 
 .search-box:hover > .search-txt{
