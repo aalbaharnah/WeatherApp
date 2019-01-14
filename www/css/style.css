@@ -33,6 +33,12 @@ body {
     transition: background-color 2s ease-out;
 }
 
+.nav{
+    position: absolute;
+    top: 2%;
+    right: 3%;
+}
+
 .search-box:hover > .search-txt{
     width: 160px;
     padding: 0 6px;
@@ -87,7 +93,7 @@ body {
     color: red;
     position: absolute;
     left: 50%;
-    top: 17%;
+    top: 20%;
 }
 
 
@@ -187,6 +193,47 @@ body {
     text-align: center;
     position: relative;
     margin: auto;
+}
+
+.cityTable {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 33%;
+    left: 21%;
+    width: 50%;
+}
+.cityTable li{
+    padding:8px 16px;
+    border-bottom:1px solid #ddd;
+}
+.cityTable li:last-child{
+    border-bottom:none;
+}
+
+.list:hover{
+    background-color:#ccc
+}
+
+.trashIcon{
+    cursor: pointer;
+    float: right;
+    margin: 5px;
+}
+
+.trashIcon:hover{
+    color: #ffe6e6;
+}
+
+.starIcon {
+    cursor: pointer;
+    float: right;
+    margin: 5px;
+}
+
+.starIcon:hover{
+    color: #ffe6e6;
 }
 
 

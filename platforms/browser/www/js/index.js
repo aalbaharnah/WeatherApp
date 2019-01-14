@@ -15,22 +15,43 @@ app.config(function ($routeProvider) {
 
 app.controller("MyWeatherController", function ($scope, $http, $timeout) {
 
-    $scope.loading = false;
     // Setting Local Storage.
-    localStorage.setItem('name', 'qatif,sa');
+    //localStorage.setItem('name', 'qatif,sa');
     console.log(localStorage.getItem('name'));
 
-
-
-    $scope.cities = ['saihat', 'london'];
+    $scope.cities = ['saihat', 'london', 'Al qatif'];
     $scope.addCity = function () {
-        $scope.cities.push($scope.addIt);
+        $scope.errtxt = '';
+        if (!$scope.addIt) {
+            return;
+        }
+        if ($scope.cities.indexOf($scope.addIt) == -1) {
+            $scope.cities.push($scope.addIt);
+        } else {
+            $scope.errtxt = 'The city is already in the list.'
+        }
+
     }
+    $scope.getFav = function (city) {
+        var fav = localStorage.getItem("name");
+        if (fav == city) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
     $scope.removeCity = function (x) {
         $scope.cities.splice(x, 1);
     }
 
+    $scope.favorCity = function (x) {
+        localStorage.setItem('name', $scope.cities[x]);
+        return { 'content': '' }
+    }
 
+    $scope.loading = false;
     // Function to get the city name data.
     $scope.getAllData = function (name) {
         $http.get('http://api.apixu.com/v1/current.json?key=46114ce99ca14871b8963021191301&q=' + name)
@@ -47,7 +68,7 @@ app.controller("MyWeatherController", function ($scope, $http, $timeout) {
                 $scope.cityIcon = response.data.current.condition.icon;
                 $scope.cityCondition = response.data.current.condition.text;
                 $scope.cityDay = response.data.current.is_day;
-        });
+            });
     }
 
     // Function to set the variables according to the local storage.
