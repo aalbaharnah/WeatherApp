@@ -28,7 +28,6 @@ app.controller("MyWeatherController", function ($scope, $http, $timeout) {
     }
 
     $scope.loading = false;
-
     // Function to get the city name data.
     $scope.getAllData = function (name) {
         $http.get('http://api.apixu.com/v1/current.json?key=46114ce99ca14871b8963021191301&q=' + name)
