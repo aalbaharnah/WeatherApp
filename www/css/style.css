@@ -3,7 +3,7 @@ body {
     position: inherit;
     display: flex;
     height: 100%;
-    background-color: #B2EBF2
+    background-color: #B2EBF2;
     animation: fadeIn 0.4s ease-in-out;
     backface-visibility: hidden;
     font-family: sans-serif;
