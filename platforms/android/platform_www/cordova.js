@@ -51,7 +51,7 @@ var define;
         factory(localRequire, module.exports, module);
         return module.exports;
     }
-ama
+
     require = function (id) {
         if (!modules[id]) {
             throw 'module ' + id + ' not found';

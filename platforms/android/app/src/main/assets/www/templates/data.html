@@ -1,51 +1,73 @@
-
 <div ng-controller="MyWeatherController">
-    <div class="box-container" ng-controller="MyWeatherController" ng-style="is_it_day()">
+    <div class="page-ani">
+        <div class="box-container" ng-style="is_it_day()">
 
-        
+            <p class="nav">
+                <a class="page-ani" ui-sref="favcity">
+                    <i class="fas fa-plus-circle fa-2x"></i>
+                </a>
+            </p>
 
             <!--Search box-->
             <div class="search-box">
                 <input class="search-txt" type="text" placeholder="City ..." ng-model="cityName">
+                
                 <a class="search-btn" ng-click="search()">
+                        <div class="page-ani" >
                     <i class="fas fa-search fa-2x"></i>
+                </div>
                 </a>
+            
             </div>
 
+            <!--Get home-->
             <a class="home" ng-click="getMeHome()">
-                <i class="fas fa-home"></i>
+                <i class="fas fa-home fa-2x"></i>
             </a>
 
             <!--City name & Tempreture-->
             <div class="text-box">
-                    <div ng-style="CityNameStyle">
+                <div ng-class="{'ani':loading}">
+                    <div class="CityNameStyle">
                         {{cityData}}
                     </div>
-                    <div ng-style="CityTempStyle">
+                    <div class="CityTempStyle">
                         {{cityTemp}}
                     </div>
+                </div>
             </div>
 
             <!-- Icon -->
             <div class="condition">
-                <img class="icon" ng-src="http:{{cityIcon}}">
-                <div class="cCond">
-                    {{ cityCondition }}
+                <div ng-class="{'ani':loading}">
+                    <img class="icon" ng-src="http:{{cityIcon}}">
+                    <div class="cCond">
+                        {{ cityCondition }}
+                    </div>
                 </div>
             </div>
-            
+
             <!-- Humidity & wind speed and clouds-->
             <div class="down-text-box">
+
+
                 <div class="col">
                     Humidity: <br />
-                    <div ng-style="CityHumidityStyle"> {{cityHumidity}} </div>
+                    <div ng-class="{'ani':loading}">
+                        <div class="CityHumidityStyle"> {{cityHumidity}} </div>
+                    </div>
                 </div>
 
                 <div class="col">
                     Wind Speed: <br />
-                    <div ng-style="CityHumidityStyle"> {{cityWind}} </div>
+                    <div ng-class="{'ani':loading}">
+                        <div class="CityHumidityStyle"> {{cityWind}} </div>
+                    </div>
                 </div>
+
+
             </div>
 
+        </div>
     </div>
 </div>

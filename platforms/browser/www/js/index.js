@@ -1,19 +1,20 @@
-var app = angular.module("MyWeatherApp", ['ngRoute', 'ngAnimate']);
+var app = angular.module("MyWeatherApp", ['ui.router', 'ngAnimate']);
 
 // Routing to the main body page.
-app.config(function ($stateProvider) {
+app.config(function($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise('/main');
     $stateProvider
-        .state('main',{
-            url:'/', 
-            controller: 'MyWeatherController',
+        .state('main', {
+            url: '/main',
             templateUrl: 'templates/data.html'
         })
-        .state('favsity', {
+        .state('favcity', {
             url:'/search', 
             controller: 'MyWeatherController',
             templateUrl: 'templates/search.html'
         })
 });
+
 
 app.controller("MyWeatherController", function ($scope, $http, $timeout) {
 
