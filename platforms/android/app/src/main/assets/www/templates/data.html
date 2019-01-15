@@ -2,28 +2,18 @@
     <div class="page-ani">
         <div class="box-container" ng-style="is_it_day()">
 
-            <p class="nav">
-                <a class="page-ani" ui-sref="favcity">
-                    <i class="fas fa-plus-circle fa-2x"></i>
-                </a>
-            </p>
-
             <!--Search box-->
             <div class="search-box">
                 <input class="search-txt" type="text" placeholder="City ..." ng-model="cityName">
-                
                 <a class="search-btn" ng-click="search()">
-                        <div class="page-ani" >
                     <i class="fas fa-search fa-2x"></i>
-                </div>
                 </a>
-            
             </div>
 
             <!--Get home-->
-            <a class="home" ng-click="getMeHome()">
-                <i class="fas fa-home fa-2x"></i>
-            </a>
+            <div class="home" ng-click="getMeHome()">
+                <i class="far fa-compass fa-3x"></i>
+            </div>
 
             <!--City name & Tempreture-->
             <div class="text-box">
@@ -49,8 +39,6 @@
 
             <!-- Humidity & wind speed and clouds-->
             <div class="down-text-box">
-
-
                 <div class="col">
                     Humidity: <br />
                     <div ng-class="{'ani':loading}">
@@ -64,9 +52,16 @@
                         <div class="CityHumidityStyle"> {{cityWind}} </div>
                     </div>
                 </div>
-
-
             </div>
+
+
+            <button class="share-btn" ng-click="share()">
+                <i class="fas fa-share-alt"></i> Share
+            </button>
+
+            <button class="nav" ui-sref="favcity">
+                <i class="fas fa-plus"></i> Add City
+            </button>
 
         </div>
     </div>

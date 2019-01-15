@@ -1,12 +1,8 @@
 <div ng-controller="MyWeatherController">
     <div class="page-ani">
-        <div class="box-container" ">
+        <div class="box-container" ng-style="is_it_day()">
 
-        <p class=" nav">
-            <a class="ani" ui-sref="main">
-                <i class="fas fa-arrow-circle-left fa-2x"></i>
-            </a>
-        </p>
+           
 
             <!--Search box-->
             <div class="search-box">
@@ -31,7 +27,11 @@
             <p>{{errtxt}}</p>
 
             <button class="share-btn" ng-click="share()">
-                <i class="fas fa-share-alt-square fa-2x"></i>
+                <i class="fas fa-share-alt"></i> Share
+            </button>
+
+            <button class="nav" ui-sref="main">
+                    <i class="fas fa-chevron-left"></i> Back
             </button>
 
         </div>
