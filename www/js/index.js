@@ -1,15 +1,24 @@
 var app = angular.module("MyWeatherApp", ['ui.router', 'ngAnimate']);
 
 // Routing to the main body page.
+<<<<<<< HEAD
 app.config(function($stateProvider, $urlRouterProvider) {
+=======
+app.config(function ($stateProvider, $urlRouterProvider) {
+>>>>>>> accc623f1112390e3aab06c71d461ebca3f9cdbc
     $urlRouterProvider.otherwise('/main');
     $stateProvider
         .state('main', {
             url: '/main',
             templateUrl: 'templates/data.html'
         })
+<<<<<<< HEAD
         .state('favsity', {
             url:'/search', 
+=======
+        .state('favcity', {
+            url: '/search',
+>>>>>>> accc623f1112390e3aab06c71d461ebca3f9cdbc
             controller: 'MyWeatherController',
             templateUrl: 'templates/search.html'
         })
@@ -95,9 +104,34 @@ app.controller("MyWeatherController", function ($scope, $http, $timeout) {
             });
     }
 
-    // Function to set the variables according to the local storage.
+    $scope.getAllData(localStorage.getItem('name'));
+
+
+
+    // Function to get user current location.
     $scope.getMeHome = function () {
-        $scope.getAllData(localStorage.getItem('name'));
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition((function (position) {
+                console.log(position.coords.longitude.toFixed(6) + '    ' + position.coords.latitude.toFixed(6));
+    
+                // Using Google API.
+                $http.get('https://maps.googleapis.com/maps/api/geocode/json?latlng=' + position.coords.latitude.toFixed(6) + ',' + position.coords.longitude.toFixed(6) + '&key=AIzaSyDzgPZGicdxjiHLFVem3lDIxR_XAVSEZus')
+                    .then(function (loc) {
+                        console.log(loc.data.results);
+                        for (var i = 0; i < loc.data.results.length; i++) {
+                            //console.log(loc.data.results[i].address_components[0].types[0]);
+                            if (loc.data.results[i].address_components[0].types[0] == "locality") {
+                                console.log(loc.data.results[i].address_components[0].long_name);
+                                $scope.cityName = loc.data.results[i].address_components[0].long_name;
+                            }
+                        }
+                        $scope.getAllData($scope.cityName);
+                    });
+            }));
+            console.log("yes")
+        } else {
+            console.log("geolocation is not supporter by this browser.");
+        }
     }
 
     // Function to search by city name.
@@ -105,37 +139,14 @@ app.controller("MyWeatherController", function ($scope, $http, $timeout) {
     $scope.search = function () {
         $scope.getAllData($scope.cityName);
     }
-
-    // Function to get user current location.
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition((function (position) {
-            console.log(position.coords.longitude.toFixed(6) + '    ' + position.coords.latitude.toFixed(6));
-
-            // Using Google API.
-            $http.get('https://maps.googleapis.com/maps/api/geocode/json?latlng=' + position.coords.latitude.toFixed(6) + ',' + position.coords.longitude.toFixed(6) + '&key=AIzaSyDzgPZGicdxjiHLFVem3lDIxR_XAVSEZus')
-                .then(function (loc) {
-                    console.log(loc.data.results);
-                    for (var i = 0; i < loc.data.results.length; i++) {
-                        //console.log(loc.data.results[i].address_components[0].types[0]);
-                        if (loc.data.results[i].address_components[0].types[0] == "locality") {
-                            console.log(loc.data.results[i].address_components[0].long_name);
-                            $scope.cityName = loc.data.results[i].address_components[0].long_name;
-                        }
-                    }
-                    $scope.getAllData($scope.cityName);
-                });
-        }));
-        console.log("yes")
-    } else {
-        console.log("geolocation is not supporter by this browser.");
-    }
+    
 
     // Function to transition the backgroun based on the timing of the city.
     $scope.is_it_day = function () {
         if ($scope.cityDay === 0) {
             console.log("is is night there");
             return {
-                "background-color": "#ffc7ba",
+                "background-color": "#4DD0E1",
                 "-webkit-transition": "background-color 2s ease-out",
                 "-moz-transition": " background-color 2s ease-out",
                 "-o-transition": "background-color 2s ease-out",
@@ -144,5 +155,12 @@ app.controller("MyWeatherController", function ($scope, $http, $timeout) {
         } else {
             console.log("it is day there");
         }
+    }
+
+    $scope.share = function () {
+        console.log("it is a click");
+        document.addEventListener("deviceready", function(){
+            window.plugins.socialsharing.share('City Name: '+ $scope.cityData + ', condition: ' + $scope.cityCondition + ', temperature: ' + $scope.cityTemp, null, 'http:'+$scope.cityIcon, null);
+        }, false);
     }
 });

@@ -1,49 +1,36 @@
-* {
-  font-size: inherit;
-  padding: 0;
-  margin: 0;
-}
-
 
 body {
     position: inherit;
-    height: 100vh;
-    background-color: #ffe6e6;
+    display: flex;
+    height: 100%;
+    background-color: #B2EBF2;
     animation: fadeIn 0.4s ease-in-out;
     backface-visibility: hidden;
-    font-family: 'Work Sans', sans-serif;
+    font-family: sans-serif;
     box-sizing: border-box;
+    justify-content: center;
 }
 
 .box-container {
-    position: absolute;
+    position: fixed;
     display: flex;
-    /* margin: inherit; */
+    margin: inherit;
     top: 60%;
-    left: 50%;
     transform: translate(-50%, -60%);
-    border-radius: 20px;
-    width: 90%;
-    height: 93%;
-    box-shadow: 0 1.7rem 9rem rgba(11, 49, 38, 0.18);
-    background: white;
+    width: 100%;
+    height: 100%;
     -webkit-transition: background-color 2s ease-out;
     -moz-transition: background-color 2s ease-out;
     -o-transition: background-color 2s ease-out;
     transition: background-color 2s ease-out;
 }
 
-.nav{
-    position: absolute;
-    top: 2%;
-    right: 3%;
-    color: #2f3640;
-}
+
 
 .search-box:hover > .search-txt{
-    width: 160px;
+    width: 75%;
     padding: 0 6px;
-    background: #f2f2f2;
+    background: #E0F7FA;
     border-radius: 40px;
     color: black;
 }
@@ -53,22 +40,23 @@ body {
     top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #2f3640;
+    background: #006064;
     height: 20px;
     border-radius: 40px;
     padding: 10px;
-    width: 220px;
+    width: 70%;
     display: flex;
     justify-content: space-between;
+    order: 1;
 }
 
 .search-btn {
-    color: #f2f2f2;
+    color: #E0F7FA;
     float: right;
     width: 40px;
     height: 20px;
     border-radius: 50%;
-    background: #2f3640;
+    background: #006064;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,25 +64,33 @@ body {
     cursor: pointer;
 }
 
+.search-btn:active {
+    animation: fadeIn 0.5s ease-out;
+}
+
+
 .search-txt {
     border: none;
     background: none;
     outline: none;
     float: left;
     padding: 0;
-    color: white;
+    color: #26C6DA;
     font-size: 16px;
     transition: 0.4s;
     line-height: 20px;
-    width: 140px;
+    width: 65%;
 }
 
 
 .home {
-    color: red;
+    color: #00838F;
     position: absolute;
-    left: 50%;
-    top: 20%;
+    left: 45%;
+    top: 18%;
+    order: 2;
+    height: 50px;
+    width: 50px;
 }
 
 
@@ -104,45 +100,39 @@ body {
     top: 33%;
     height: 40%;
     width: 55%;
-    /* text-align: center; */
     display: flex;
     flex-flow: column;
+    order: 3;
 }
 
-/*
-.ani.ng-enter {
-    transition:1s linear all;
-    opacity:0;
+  .ani {
+    animation: fadeInDown 0.5s ease-out;
   }
 
-.ani.ng-enter.ng-enter-active {
-    opacity:1;
+  .page-ani {
+      animation: fadeIn 0.5s ease-out;
   }
-  */
 
 .CityNameStyle  {
     position: relative;
     padding : 5%;
-    color: rgb(232, 142, 5);
+    color: #00B8D4;
     text-transform : uppercase;
     font-weight: 900;
     font-size: 9vw;
     letter-spacing: 0.1rem;
-    animation: fadeInDown 1s ease-out;
 }
 
 
 .CityTempStyle  {
     line-height: 10rem;
     padding : 5%;
-    color: #b36b00;
+    color: #00838F;
     font-weight: 700;
     font-size: 24vw;
     letter-spacing: .1rem;
-    animation: fadeInDown 1s ease-out;
     transition: .6s;
     backface-visibility: hidden;
-    /* text-align: center; */
     align-self: center;
 }
 
@@ -150,11 +140,12 @@ body {
 .condition{
     position: absolute;
     left: 53%;
-    top: 33%;
+    top: 37%;
     height: 40%;
     width: 40%;
     padding-top: 5%;
     text-align: center;
+    order: 3;
 }
 
 .icon{
@@ -165,8 +156,9 @@ body {
 .cCond{
     position: relative;
     padding: 5%;
-    color: black;
-    font-size: large;
+    color: #00838F;
+    font-size: 6vw;
+    font-weight: 700;
 }
 
 
@@ -176,13 +168,14 @@ body {
   top: 74%;
   display: flex;
   flex-flow: row;
+  order: 4;
 }
 
 .CityHumidityStyle {
-    color: #b36b00;
-    font-weight: 400;
-    font-size: 15px;
-    letter-spacing: .2rem;
+    color: #00838F;
+    font-weight: 500;
+    font-size: 5vw;
+    letter-spacing: .1rem;
     animation: fadeInDown 1s ease-out;
     backface-visibility: hidden;
 }
@@ -196,18 +189,48 @@ body {
     margin: auto;
 }
 
+.share-btn{
+    position: absolute;
+    cursor: pointer;
+    left: 7%;
+    color: #2f3640;
+    border: 2px solid #00ACC1;
+    background-color: none;
+    order: 20;
+    height: 36px;
+    width: 40%;
+    text-align: center;
+    display: inline-block;
+    margin: 4px 2px;
+    font-size: 3.5vw;
+    font-weight: 600;
+    border-radius: 40px;
+    top: 89%;
+    color: #00ACC1;
+}
+
 .cityTable {
     list-style-type: none;
     padding: 0;
     margin: 0;
     position: absolute;
     top: 33%;
+<<<<<<< HEAD
     left: 9%;
     width: 80%;
+=======
+    left: 5%;
+    width: 90%;
+    box-sizing: border-box;
+>>>>>>> accc623f1112390e3aab06c71d461ebca3f9cdbc
 }
 .cityTable li{
-    padding:8px 16px;
-    border-bottom:1px solid #ddd;
+    padding: 8px 16px;
+    height: 48px;
+    border-bottom: 1px solid rgb(190, 189, 189);
+    border-radius: 5px;
+    font-size: 16px;
+    text-transform: uppercase;
 }
 .cityTable li:last-child{
     border-bottom:none;
@@ -237,6 +260,7 @@ body {
     color: #ffe6e6;
 }
 
+<<<<<<< HEAD
 main.ng-enter{
     transition: 0.5 linear all;
     opacity: 0;
@@ -244,15 +268,45 @@ main.ng-enter{
 
 main.ng-enter.ng-enter-active {
     opacity: 1;
+=======
+.nav{
+    position: absolute;
+    top: 89%;
+    left: 50%;
+    color: white;
+    order: 20;
+    height: 36px;
+    width: 40%;
+    background-color: #00ACC1;
+    text-align: center;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 3.5vw;
+    font-weight: 600;
+    border-radius: 40px;
+}
+
+@keyframes fadeInDown {
+    0% {
+        transition: 0.2s linear all;
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+    }
+>>>>>>> accc623f1112390e3aab06c71d461ebca3f9cdbc
 }
 
 @keyframes fadeIn {
     0%{
+        transition: 0.2s linear all;
         opacity: 0;
-        transform: scale(0)
     }
 
     100%{
-        transform: scale(1);
+        opacity: 1;
     }
 }

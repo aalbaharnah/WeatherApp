@@ -7,12 +7,20 @@
     "files": {}
   },
   "installed_plugins": {
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "sa.albaharnah.ali.weatherapp"
+    },
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "sa.albaharnah.ali.weatherapp"
     },
-    "cordova-plugin-geolocation": {
+    "cordova-plugin-x-socialsharing": {
+      "ANDROID_SUPPORT_V4_VERSION": "24.1.1+",
       "PACKAGE_NAME": "sa.albaharnah.ali.weatherapp"
     }
   },
-  "dependent_plugins": {}
+  "dependent_plugins": {
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "sa.albaharnah.ali.weatherapp"
+    }
+  }
 }

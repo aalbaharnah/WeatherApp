@@ -1,0 +1,39 @@
+<div ng-controller="MyWeatherController">
+    <div class="page-ani">
+        <div class="box-container" ng-style="is_it_day()">
+
+           
+
+            <!--Search box-->
+            <div class="search-box">
+                <input class="search-txt" type="text" placeholder="Add a city .." ng-model="addIt">
+                <a class="search-btn" ng-click="addCity()">
+                    <i class="fas fa-plus-circle fa-2x"></i>
+                </a>
+            </div>
+
+            <ul class="cityTable">
+                <li class="list" ng-repeat="x in cities">
+                    {{x}}
+                    <span ng-click="removeCity($index)" class="trashIcon">
+                        <i class="fas fa-trash-alt"></i>
+                    </span>
+
+                    <span ng-click="favorCity($index)" class="starIcon">
+                        <i ng-class="{'far fa-star':getFav(x)==false, 'fas fa-star':getFav(x)}"></i>
+                    </span>
+                </li>
+            </ul>
+            <p>{{errtxt}}</p>
+
+            <button class="share-btn" ng-click="share()">
+                <i class="fas fa-share-alt"></i> Share
+            </button>
+
+            <button class="nav" ui-sref="main">
+                    <i class="fas fa-chevron-left"></i> Back
+            </button>
+
+        </div>
+    </div>
+</div>

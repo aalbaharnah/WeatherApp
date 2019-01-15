@@ -2,7 +2,11 @@
     <div class="box-container" ng-controller="MyWeatherController" ng-style="is_it_day()">
 
         <p class="nav">
+<<<<<<< HEAD
             <a ui-sref="favsity">
+=======
+            <a ui-sref="favcity">
+>>>>>>> accc623f1112390e3aab06c71d461ebca3f9cdbc
                 <i class="fas fa-plus-circle fa-2x"></i>
             </a>
         </p>
@@ -21,8 +25,8 @@
 
         <!--City name & Tempreture-->
         <div class="text-box">
-            <div class="ani">
-                <div ng-class="{'CityNameStyle':loading}">
+            <div ng-class="{'ani':loading}">
+                <div class="CityNameStyle">
                     {{cityData}}
                 </div>
                 <div class="CityTempStyle">

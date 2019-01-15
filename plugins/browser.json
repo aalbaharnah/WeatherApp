@@ -12,7 +12,14 @@
     },
     "cordova-plugin-geolocation": {
       "PACKAGE_NAME": "sa.albaharnah.ali.weatherapp"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "PACKAGE_NAME": "sa.albaharnah.ali.weatherapp"
     }
   },
-  "dependent_plugins": {}
+  "dependent_plugins": {
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "sa.albaharnah.ali.weatherapp"
+    }
+  }
 }

@@ -8,7 +8,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             url: '/main',
             templateUrl: 'templates/data.html'
         })
-        .state('favsity', {
+        .state('favcity', {
             url:'/search', 
             controller: 'MyWeatherController',
             templateUrl: 'templates/search.html'

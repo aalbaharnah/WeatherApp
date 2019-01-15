@@ -56,6 +56,10 @@
         "source": "/Users/aalbaharnah/Challenge/WeatherApp/platforms/android/app/src/main/res/drawable-port-mdpi/screen.png"
     },
     {
+        "merged": "/Users/aalbaharnah/Challenge/WeatherApp/platforms/android/app/build/intermediates/res/merged/debug/xml_sharing_paths.xml.flat",
+        "source": "/Users/aalbaharnah/Challenge/WeatherApp/platforms/android/app/src/main/res/xml/sharing_paths.xml"
+    },
+    {
         "merged": "/Users/aalbaharnah/Challenge/WeatherApp/platforms/android/app/build/intermediates/res/merged/debug/drawable-port-xhdpi_screen.png.flat",
         "source": "/Users/aalbaharnah/Challenge/WeatherApp/platforms/android/app/src/main/res/drawable-port-xhdpi/screen.png"
     },

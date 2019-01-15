@@ -120,6 +120,10 @@ body {
   }
   */
 
+  .ani {
+    animation: fadeInDown 1s ease-out;
+  }
+
 .CityNameStyle  {
     position: relative;
     padding : 5%;
@@ -128,7 +132,6 @@ body {
     font-weight: 900;
     font-size: 9vw;
     letter-spacing: 0.1rem;
-    animation: fadeInDown 1s ease-out;
 }
 
 
@@ -139,7 +142,7 @@ body {
     font-weight: 700;
     font-size: 24vw;
     letter-spacing: .1rem;
-    animation: fadeInDown 1s ease-out;
+    /*animation: fadeInDown 1s ease-out;*/
     transition: .6s;
     backface-visibility: hidden;
     /* text-align: center; */
