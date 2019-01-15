@@ -1,40 +1,18 @@
 var app = angular.module("MyWeatherApp", ['ui.router', 'ngAnimate']);
 
 // Routing to the main body page.
-/*
-app.config(function ($stateProvider) {
-    $stateProvider
-        .state('main',{
-            url:'/', 
-            controller: 'MyWeatherController',
-            templateUrl: 'templates/data.html'
-        })
-        .state('favsity', {
-            url:'/search', 
-            controller: 'MyWeatherController',
-            templateUrl: 'templates/search.html'
-        })
-});
-*/
-
 app.config(function($stateProvider, $urlRouterProvider) {
-
     $urlRouterProvider.otherwise('/main');
-
     $stateProvider
-
-        // HOME STATES AND NESTED VIEWS ========================================
         .state('main', {
             url: '/main',
             templateUrl: 'templates/data.html'
         })
-
         .state('favsity', {
             url:'/search', 
             controller: 'MyWeatherController',
             templateUrl: 'templates/search.html'
         })
-
 });
 
 
@@ -45,6 +23,8 @@ app.controller("MyWeatherController", function ($scope, $http, $timeout) {
     console.log(localStorage.getItem('name'));
 
     $scope.cities = ['saihat', 'london', 'Al qatif'];
+
+    /*
     $scope.addCity = function () {
         $scope.errtxt = '';
         if (!$scope.addIt) {
@@ -57,6 +37,25 @@ app.controller("MyWeatherController", function ($scope, $http, $timeout) {
         }
 
     }
+    */
+    
+
+    
+    $scope.addToStorage = function () {
+        $scope.errtxt = '';
+        if (!$scope.addIt) {
+            return;
+        }
+        for (var i=0; i < localStorage.length; i++)
+        if (localStorage.key(i) == null) {
+            localStorage.setItem(i, $scope.addIt);
+        } else {
+            $scope.errtxt = 'The city is already in the list.'
+        }
+
+    }
+    
+
     $scope.getFav = function (city) {
         var fav = localStorage.getItem("name");
         if (fav == city) {

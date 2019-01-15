@@ -202,8 +202,8 @@ body {
     margin: 0;
     position: absolute;
     top: 33%;
-    left: 21%;
-    width: 50%;
+    left: 9%;
+    width: 80%;
 }
 .cityTable li{
     padding:8px 16px;
@@ -237,6 +237,14 @@ body {
     color: #ffe6e6;
 }
 
+main.ng-enter{
+    transition: 0.5 linear all;
+    opacity: 0;
+}
+
+main.ng-enter.ng-enter-active {
+    opacity: 1;
+}
 
 @keyframes fadeIn {
     0%{
