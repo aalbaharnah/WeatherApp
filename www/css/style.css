@@ -1,4 +1,4 @@
-
+/* Universial body and container */
 body {
     position: inherit;
     display: flex;
@@ -6,7 +6,7 @@ body {
     background-color: #B2EBF2;
     animation: fadeIn 0.4s ease-in-out;
     backface-visibility: hidden;
-    font-family: sans-serif;
+    font-family: Verdana;
     box-sizing: border-box;
     justify-content: center;
 }
@@ -25,8 +25,16 @@ body {
     transition: background-color 2s ease-out;
 }
 
+.page-ani {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Universial body and container */
 
 
+
+
+/* Search Box of the main page */
 .search-box:hover > .search-txt{
     width: 75%;
     padding: 0 6px;
@@ -34,7 +42,6 @@ body {
     border-radius: 40px;
     color: black;
 }
-
 .search-box {
     position: relative;
     top: 10%;
@@ -49,7 +56,6 @@ body {
     justify-content: space-between;
     order: 1;
 }
-
 .search-btn {
     color: #E0F7FA;
     float: right;
@@ -63,12 +69,9 @@ body {
     font-size: 75.5%;
     cursor: pointer;
 }
-
 .search-btn:active {
-    animation: fadeIn 0.5s ease-out;
+    opacity: 0.3;
 }
-
-
 .search-txt {
     border: none;
     background: none;
@@ -81,8 +84,10 @@ body {
     line-height: 20px;
     width: 65%;
 }
+/* Search Box of the main page */
 
 
+/* Navigiation button at the upper center of the main page */
 .home {
     color: #00838F;
     position: absolute;
@@ -92,8 +97,16 @@ body {
     height: 50px;
     width: 50px;
 }
+.home:active {
+    opacity: 0.4;
+}
+/* Navigiation button at the upper center of the main page */
 
 
+.ani {
+    animation: fadeInDown 0.5s ease-out;
+}
+/* Box that has City Name and Tempreture */
 .text-box{
     left: 8%;
     position: absolute;
@@ -103,16 +116,8 @@ body {
     display: flex;
     flex-flow: column;
     order: 3;
+    box-sizing: border-box;
 }
-
-  .ani {
-    animation: fadeInDown 0.5s ease-out;
-  }
-
-  .page-ani {
-      animation: fadeIn 0.5s ease-out;
-  }
-
 .CityNameStyle  {
     position: relative;
     padding : 5%;
@@ -122,8 +127,6 @@ body {
     font-size: 9vw;
     letter-spacing: 0.1rem;
 }
-
-
 .CityTempStyle  {
     line-height: 10rem;
     padding : 5%;
@@ -136,7 +139,6 @@ body {
     align-self: center;
 }
 
-
 .condition{
     position: absolute;
     left: 53%;
@@ -147,12 +149,10 @@ body {
     text-align: center;
     order: 3;
 }
-
 .icon{
     height: 35%;
     position: relative;
 }
-
 .cCond{
     position: relative;
     padding: 5%;
@@ -171,6 +171,15 @@ body {
   order: 4;
 }
 
+.col{
+    float: left;
+    width: 33.33%;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    margin: auto;
+}
+
 .CityHumidityStyle {
     color: #00838F;
     font-weight: 500;
@@ -180,14 +189,6 @@ body {
     backface-visibility: hidden;
 }
 
-.col{
-    float: left;
-    width: 33.33%;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-    margin: auto;
-}
 
 .share-btn{
     position: absolute;
@@ -209,32 +210,76 @@ body {
     color: #00ACC1;
 }
 
-.cityTable {
+
+
+.nav{
+    position: absolute;
+    top: 89%;
+    left: 50%;
+    color: white;
+    order: 20;
+    height: 36px;
+    width: 40%;
+    background-color: #00ACC1;
+    text-align: center;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 3.5vw;
+    font-weight: 600;
+    border-radius: 40px;
+}
+
+.no-cities {
+    color: #00B8D4;
+    left: 35%;
+    position: absolute;
+    opacity: 0.5;
+}
+
+
+.list-type{
+    margin: 0 auto;
     list-style-type: none;
     padding: 0;
-    margin: 0;
     position: absolute;
     top: 33%;
     left: 5%;
     width: 90%;
     box-sizing: border-box;
+
 }
-.cityTable li{
+
+.list-type ul {
+    counter-reset: li;
+    list-style: none;
+    font-size: 15px;
+    font-family: 'Raleway', sans-serif;
+    padding: 0;
+    margin-bottom: 4em;
+}
+
+.list-type ul ul {
+    margin: 0 0 0 2em;
+}
+
+.list-type li{
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em 2em;
+    margin: .5em .5em;
+    color: #444;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.list-type li{
     padding: 8px 16px;
     height: 48px;
     border-bottom: 1px solid rgb(190, 189, 189);
-    border-radius: 5px;
     font-size: 16px;
-    text-transform: uppercase;
+    
 }
-.cityTable li:last-child{
-    border-bottom:none;
-}
-
-.list:hover{
-    background-color:#ccc
-}
-
 .trashIcon{
     cursor: pointer;
     float: right;
@@ -255,23 +300,8 @@ body {
     color: #ffe6e6;
 }
 
-.nav{
-    position: absolute;
-    top: 89%;
-    left: 50%;
-    color: white;
-    order: 20;
-    height: 36px;
-    width: 40%;
-    background-color: #00ACC1;
-    text-align: center;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-    font-size: 3.5vw;
-    font-weight: 600;
-    border-radius: 40px;
-}
+    
+
 
 @keyframes fadeInDown {
     0% {

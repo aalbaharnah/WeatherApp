@@ -12,18 +12,24 @@
                 </a>
             </div>
 
-            <ul class="cityTable">
-                <li class="list" ng-repeat="x in cities">
-                    {{x}}
-                    <span ng-click="removeCity($index)" class="trashIcon">
-                        <i class="fas fa-trash-alt"></i>
-                    </span>
+            <div class="list-type">
+                <ul>
+                    <li class="list" ng-repeat="x in cities">
+                        {{x}}
+                        <span ng-click="removeCity($index)" class="trashIcon">
+                            <i class="fas fa-trash-alt"></i>
+                        </span>
 
-                    <span ng-click="favorCity($index)" class="starIcon">
-                        <i ng-class="{'far fa-star':getFav(x)==false, 'fas fa-star':getFav(x)}"></i>
-                    </span>
-                </li>
-            </ul>
+                        <span ng-click="favorCity($index)" class="starIcon">
+                            <i ng-class="{'far fa-star':getFav(x)==false, 'fas fa-star':getFav(x)}"></i>
+                        </span>
+                    </li>
+                    <div class="no-cities">
+                        <i ng-class="{'fab fa-creative-commons-zero fa-6x':cities.length == 0}"></i>
+                    </div>
+                </ul>
+             </div>
+
             <p>{{errtxt}}</p>
 
             <button class="share-btn" ng-click="share()">

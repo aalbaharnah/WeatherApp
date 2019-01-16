@@ -20,9 +20,15 @@ app.controller("MyWeatherController", function ($scope, $http, $timeout) {
 
     // Setting Local Storage.
     //localStorage.setItem('name', 'qatif,sa');
-    console.log(localStorage.getItem('name'));
 
-    $scope.cities = ['saihat', 'london', 'Al qatif'];
+    /*
+    $http.get('../json/cities.json').then(function(res){
+        $scope.cities = res.data;
+    });
+    */
+   localStorage.setItem('name', 'london');
+   $scope.cities = JSON.parse(localStorage.city);
+    
     $scope.addCity = function () {
         $scope.errtxt = '';
         if (!$scope.addIt) {
@@ -30,6 +36,7 @@ app.controller("MyWeatherController", function ($scope, $http, $timeout) {
         }
         if ($scope.cities.indexOf($scope.addIt) == -1) {
             $scope.cities.push($scope.addIt);
+            localStorage.setItem('city' , JSON.stringify($scope.cities));
         } else {
             $scope.errtxt = 'The city is already in the list.'
         }
@@ -47,6 +54,7 @@ app.controller("MyWeatherController", function ($scope, $http, $timeout) {
 
     $scope.removeCity = function (x) {
         $scope.cities.splice(x, 1);
+        localStorage.setItem('city' , JSON.stringify($scope.cities));
     }
 
     $scope.favorCity = function (x) {
@@ -71,6 +79,16 @@ app.controller("MyWeatherController", function ($scope, $http, $timeout) {
                 $scope.cityIcon = response.data.current.condition.icon;
                 $scope.cityCondition = response.data.current.condition.text;
                 $scope.cityDay = response.data.current.is_day;
+                $scope.code = response.data.current.condition.code;
+                $http.get('../json/weather_icons.json').then(function(res){
+                    for (var i=0; i<res.data.length; i++){
+                        if (res.data[i].code == $scope.code){
+                            console.log(res.data[i].icon);
+                            console.log(res.data[i].day);
+                            $scope.fontawsome =  res.data[i].icon;
+                        }
+                    }
+                });
             });
     }
 
@@ -125,6 +143,10 @@ app.controller("MyWeatherController", function ($scope, $http, $timeout) {
         } else {
             console.log("it is day there");
         }
+    }
+
+    $scope.getIcon = function () {
+        
     }
 
     $scope.share = function () {
