@@ -141,9 +141,9 @@ body {
 
 .condition{
     position: absolute;
-    left: 53%;
-    top: 37%;
-    height: 40%;
+    left: 57%;
+    top: 41%;
+    height: 32%;
     width: 40%;
     padding-top: 5%;
     text-align: center;
@@ -152,6 +152,8 @@ body {
 .icon{
     height: 35%;
     position: relative;
+    color: #00B8D4;
+    margin-bottom: 20px;
 }
 .cCond{
     position: relative;
