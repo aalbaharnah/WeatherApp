@@ -18,16 +18,8 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 
 app.controller("MyWeatherController", function ($scope, $http, $timeout) {
 
-    // Setting Local Storage.
-    //localStorage.setItem('name', 'qatif,sa');
-
-    /*
-    $http.get('../json/cities.json').then(function(res){
-        $scope.cities = res.data;
-    });
-    */
-   localStorage.setItem('name', 'london');
-   $scope.cities = JSON.parse(localStorage.city);
+    // Get cities from localStorage.
+    $scope.cities = JSON.parse(localStorage.city);
     
     $scope.addCity = function () {
         $scope.errtxt = '';
@@ -58,6 +50,8 @@ app.controller("MyWeatherController", function ($scope, $http, $timeout) {
     }
 
     $scope.favorCity = function (x) {
+        console.log(x);
+        console.log($scope.cities[x]);
         localStorage.setItem('name', $scope.cities[x]);
         return { 'content': '' }
     }
