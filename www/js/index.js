@@ -19,7 +19,15 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 app.controller("MyWeatherController", function ($scope, $http, $timeout) {
 
     // Get cities from localStorage.
-    $scope.cities = JSON.parse(localStorage.city);
+    if (localStorage.city){
+        console.log('yes');
+        $scope.cities = JSON.parse(localStorage.city);
+    } else {
+        var init_cities = ['london', 'paris', 'saihat'];
+        var json = JSON.stringify(init_cities);
+        localStorage.setItem('city', json);
+    }
+    
 
     
     // function to add a city to the list in "favcity" page.
