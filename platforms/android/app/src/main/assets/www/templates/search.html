@@ -2,8 +2,6 @@
     <div class="page-ani">
         <div class="box-container" ng-style="is_it_day()">
 
-           
-
             <!--Search box-->
             <div class="search-box">
                 <input class="search-txt" type="text" placeholder="Add a city .." ng-model="addIt">
@@ -13,8 +11,8 @@
             </div>
 
             <div class="list-type">
-                <ul>
-                    <li class="list" ng-repeat="x in cities">
+                <ul class="ani">
+                    <li class="list-type" ng-repeat="x in cities">
                         {{x}}
                         <span ng-click="removeCity($index)" class="trashIcon">
                             <i class="fas fa-trash-alt"></i>
@@ -30,7 +28,7 @@
                 </ul>
              </div>
 
-            <p>{{errtxt}}</p>
+            <p class="err">{{errtxt}}</p>
 
             <button class="share-btn" ng-click="share()">
                 <i class="fas fa-share-alt"></i> Share

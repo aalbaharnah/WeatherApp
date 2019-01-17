@@ -278,13 +278,12 @@ body {
 
 
 .list-type li.ng-leave{
-    transition: 0.7s linear all;
-    opacity: 0;
+    transition: 0.2s linear all;
+    opacity: 1;
 }
 
 .list-type li.ng-leave.ng-leave-active {
-    opacity: 1;
-    transform: translateX(-200%);
+    opacity: 0;
 }
 
 .trashIcon{

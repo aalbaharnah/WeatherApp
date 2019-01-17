@@ -29,9 +29,6 @@ body {
     animation: fadeIn 0.5s ease-out;
 }
 
-/* Universial body and container */
-
-
 
 
 /* Search Box of the main page */
@@ -84,7 +81,6 @@ body {
     line-height: 20px;
     width: 65%;
 }
-/* Search Box of the main page */
 
 
 /* Navigiation button at the upper center of the main page */
@@ -99,13 +95,15 @@ body {
 }
 .home:active {
     opacity: 0.4;
+    transform: rotate(60deg);
+
 }
-/* Navigiation button at the upper center of the main page */
 
 
 .ani {
     animation: fadeInDown 0.5s ease-out;
 }
+
 /* Box that has City Name and Tempreture */
 .text-box{
     left: 8%;
@@ -249,7 +247,6 @@ body {
     left: 5%;
     width: 90%;
     box-sizing: border-box;
-
 }
 
 .list-type ul {
@@ -268,20 +265,28 @@ body {
 .list-type li{
     position: relative;
     display: block;
-    padding: .4em .4em .4em 2em;
+    padding: 8px 16px;
     margin: .5em .5em;
+    height: 48px;
     color: #444;
     text-decoration: none;
     text-transform: uppercase;
+    font-size: 16px;
+    animation: fadeInDown 0.5s ease-out;
+    border-bottom: 1px solid rgb(190, 189, 189);
 }
 
-.list-type li{
-    padding: 8px 16px;
-    height: 48px;
-    border-bottom: 1px solid rgb(190, 189, 189);
-    font-size: 16px;
-    
+
+.list-type li.ng-leave{
+    transition: 0.7s linear all;
+    opacity: 0;
 }
+
+.list-type li.ng-leave.ng-leave-active {
+    opacity: 1;
+    transform: translateX(-200%);
+}
+
 .trashIcon{
     cursor: pointer;
     float: right;
@@ -302,6 +307,13 @@ body {
     color: #ffe6e6;
 }
 
+.err {
+    position: absolute;
+    top: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    left: 7%;
+}
     
 
 

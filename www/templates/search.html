@@ -3,7 +3,7 @@
         <div class="box-container" ng-style="is_it_day()">
 
             <!--Search box-->
-            <div class="search-box">
+            <div class="search-box" ng-submit="addCity()">
                 <input class="search-txt" type="text" placeholder="Add a city .." ng-model="addIt">
                 <a class="search-btn" ng-click="addCity()">
                     <i class="fas fa-plus-circle fa-2x"></i>
