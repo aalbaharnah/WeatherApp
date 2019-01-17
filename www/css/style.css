@@ -96,7 +96,7 @@ body {
 .home:active {
     opacity: 0.4;
     transform: rotate(60deg);
-
+    transition-duration: 0.1s;
 }
 
 
