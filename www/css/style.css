@@ -1,4 +1,4 @@
-
+/* Universial body and container */
 body {
     position: inherit;
     display: flex;
@@ -6,7 +6,7 @@ body {
     background-color: #B2EBF2;
     animation: fadeIn 0.4s ease-in-out;
     backface-visibility: hidden;
-    font-family: sans-serif;
+    font-family: Verdana;
     box-sizing: border-box;
     justify-content: center;
 }
@@ -25,8 +25,13 @@ body {
     transition: background-color 2s ease-out;
 }
 
+.page-ani {
+    animation: fadeIn 0.5s ease-out;
+}
 
 
+
+/* Search Box of the main page */
 .search-box:hover > .search-txt{
     width: 75%;
     padding: 0 6px;
@@ -34,10 +39,9 @@ body {
     border-radius: 40px;
     color: black;
 }
-
 .search-box {
     position: relative;
-    top: 10%;
+    top: 8%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: #006064;
@@ -49,7 +53,6 @@ body {
     justify-content: space-between;
     order: 1;
 }
-
 .search-btn {
     color: #E0F7FA;
     float: right;
@@ -63,12 +66,9 @@ body {
     font-size: 75.5%;
     cursor: pointer;
 }
-
 .search-btn:active {
-    animation: fadeIn 0.5s ease-out;
+    opacity: 0.3;
 }
-
-
 .search-txt {
     border: none;
     background: none;
@@ -83,36 +83,41 @@ body {
 }
 
 
+/* Navigiation button at the upper center of the main page */
 .home {
-    color: #00838F;
+color: #006064;
     position: absolute;
-    left: 45%;
+    left: 39%;
     top: 18%;
     order: 2;
-    height: 50px;
-    width: 50px;
+    height: 85px;
+    width: 85px;
+
+    text-align: center;
+}
+.home:active {
+    opacity: 0.4;
+    transform: rotate(30deg);
+    transition-duration: 0.1s;
 }
 
+.ani {
+    animation: fadeInDown 0.2s ease-out;
+}
 
+/* Box that has City Name and Tempreture */
 .text-box{
-    left: 8%;
+    left: 28%;
     position: absolute;
-    top: 33%;
-    height: 40%;
-    width: 55%;
+    text-align: center;
+    top: 2%;
+    height: 59%;
+    width: 43%;
     display: flex;
     flex-flow: column;
     order: 3;
+    box-sizing: border-box;
 }
-
-  .ani {
-    animation: fadeInDown 0.5s ease-out;
-  }
-
-  .page-ani {
-      animation: fadeIn 0.5s ease-out;
-  }
-
 .CityNameStyle  {
     position: relative;
     padding : 5%;
@@ -124,33 +129,35 @@ body {
 }
 
 
-.CityTempStyle  {
-    line-height: 10rem;
-    padding : 5%;
-    color: #00838F;
-    font-weight: 700;
-    font-size: 24vw;
-    letter-spacing: .1rem;
-    transition: .6s;
-    backface-visibility: hidden;
-    align-self: center;
+.mid{
+    display: flex;
+    flex-flow: row;
+    align-items: baseline;
+    justify-content: center;
 }
 
-
+.CityTempStyle  {
+     padding: 3%;
+     color: #00838F;
+     /* font-weight: 700; */
+     font-size: 24vw;
+}
 .condition{
     position: absolute;
-    left: 53%;
-    top: 37%;
-    height: 40%;
+    left: 57%;
+    top: 41%;
+    height: 32%;
     width: 40%;
     padding-top: 5%;
     text-align: center;
     order: 3;
 }
-
 .icon{
     height: 35%;
     position: relative;
+    color: #00838F;
+    margin-bottom: 20px;
+    padding: 3%;
 }
 
 .cCond{
@@ -171,6 +178,16 @@ body {
   order: 4;
 }
 
+.col{
+    float: left;
+    width: 33.33%;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    margin: auto;
+    color: #00B8D4;
+}
+
 .CityHumidityStyle {
     color: #00838F;
     font-weight: 500;
@@ -180,14 +197,6 @@ body {
     backface-visibility: hidden;
 }
 
-.col{
-    float: left;
-    width: 33.33%;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-    margin: auto;
-}
 
 .share-btn{
     position: absolute;
@@ -197,7 +206,7 @@ body {
     border: 2px solid #00ACC1;
     background-color: none;
     order: 20;
-    height: 36px;
+    height: 40px;
     width: 40%;
     text-align: center;
     display: inline-block;
@@ -209,11 +218,40 @@ body {
     color: #00ACC1;
 }
 
-.cityTable {
+
+
+.nav{
+    position: absolute;
+    top: 89%;
+    left: 50%;
+    color: white;
+    order: 20;
+    height: 40px;
+    width: 40%;
+    background-color: #00ACC1;
+    text-align: center;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 3.5vw;
+    font-weight: 600;
+    border-radius: 40px;
+}
+
+.no-cities {
+    color: #00B8D4;
+    left: 42%;
+    position: absolute;
+    opacity: 0.5;
+}
+
+
+.list-type{
+    margin: 0 auto;
     list-style-type: none;
     padding: 0;
-    margin: 0;
     position: absolute;
+<<<<<<< HEAD
     top: 33%;
 <<<<<<< HEAD
     left: 9%;
@@ -223,21 +261,53 @@ body {
     width: 90%;
     box-sizing: border-box;
 >>>>>>> accc623f1112390e3aab06c71d461ebca3f9cdbc
-}
-.cityTable li{
-    padding: 8px 16px;
-    height: 48px;
-    border-bottom: 1px solid rgb(190, 189, 189);
-    border-radius: 5px;
-    font-size: 16px;
-    text-transform: uppercase;
-}
-.cityTable li:last-child{
-    border-bottom:none;
+=======
+    top: 7%;
+    left: 19%;
+    width: 62%;
+    height: 45%;
+    box-sizing: border-box;
+    overflow: scroll;
 }
 
-.list:hover{
-    background-color:#ccc
+
+.list-type ul {
+    list-style: none;
+    font-size: 15px;
+    font-family: 'Raleway', sans-serif;
+    padding: 0;
+    margin-bottom: 4em;
+>>>>>>> 76393e6ef00e5ef8c4b5ba070d022cbc91c12d6a
+}
+
+.list-type ul.ng-leave {
+    opacity: 1;
+}
+.list-type ul.ng-leave.ng-leave-active {
+    opacity: 0;
+}
+
+.list-type li{
+    position: relative;
+    display: block;
+    padding: 8px 16px;
+    margin: .5em 0em;
+    height: 48px;
+    color: #00838F;
+    text-decoration: none;
+    font-size: 16px;
+    animation: fadeInDown 0.5s ease-out;
+    border-bottom: 1px solid rgb(190, 189, 189);
+}
+
+
+.list-type li.ng-leave{
+    transition: 0.2s linear all;
+    opacity: 1;
+}
+
+.list-type li.ng-leave.ng-leave-active {
+    opacity: 0;
 }
 
 .trashIcon{
@@ -260,23 +330,24 @@ body {
     color: #ffe6e6;
 }
 
-.nav{
+.err {
     position: absolute;
-    top: 89%;
-    left: 50%;
-    color: white;
-    order: 20;
-    height: 36px;
-    width: 40%;
-    background-color: #00ACC1;
-    text-align: center;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-    font-size: 3.5vw;
-    font-weight: 600;
-    border-radius: 40px;
+    top: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    left: 7%;
 }
+
+.round {
+    background-color: white;
+    position: absolute;
+    width: 240%;
+    height: 100%;
+    border-radius: 50%;
+    top: 28%;
+    right: -71%;
+}
+
 
 @keyframes fadeInDown {
     0% {

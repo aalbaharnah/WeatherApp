@@ -1,4 +1,5 @@
 <div ng-controller="MyWeatherController">
+<<<<<<< HEAD
     <div class="box-container" ">
 
         <p class=" nav">
@@ -14,20 +15,49 @@
                 <i class="fas fa-plus-circle fa-2x"></i>
             </a>
         </div>
+=======
+    <div class="page-ani">
+        <div class="box-container" ng-style="is_it_day()">
 
-        <ul class="cityTable">
-            <li class="list" ng-repeat="x in cities">
-                {{x}}
-                <span ng-click="removeCity($index)" class="trashIcon">
-                    <i class="fas fa-trash-alt"></i>
-                </span>
+           
 
-                <span ng-click="favorCity($index)" class="starIcon">
-                    <i ng-class="{'far fa-star':getFav(x)==false, 'fas fa-star':getFav(x)}"></i>
-                </span>
-            </li>
-        </ul>
-        <p>{{errtxt}}</p>
+            <!--Search box-->
+            <div class="search-box">
+                <input class="search-txt" type="text" placeholder="Add a city .." ng-model="addIt">
+                <a class="search-btn" ng-click="addCity()">
+                    <i class="fas fa-plus-circle fa-2x"></i>
+                </a>
+            </div>
 
+            <div class="list-type">
+                <ul class="ani">
+                    <li class="list-type" ng-repeat="x in cities">
+                        {{x}}
+                        <span ng-click="removeCity($index)" class="trashIcon">
+                            <i class="fas fa-trash-alt"></i>
+                        </span>
+>>>>>>> 76393e6ef00e5ef8c4b5ba070d022cbc91c12d6a
+
+                        <span ng-click="favorCity($index)" class="starIcon">
+                            <i ng-class="{'far fa-star':getFav(x)==false, 'fas fa-star':getFav(x)}"></i>
+                        </span>
+                    </li>
+                    <div class="no-cities">
+                        <i ng-class="{'fab fa-creative-commons-zero fa-6x':cities.length == 0}"></i>
+                    </div>
+                </ul>
+             </div>
+
+            <p>{{errtxt}}</p>
+
+            <button class="share-btn" ng-click="share()">
+                <i class="fas fa-share-alt"></i> Share
+            </button>
+
+            <button class="nav" ui-sref="main">
+                    <i class="fas fa-chevron-left"></i> Back
+            </button>
+
+        </div>
     </div>
 </div>
