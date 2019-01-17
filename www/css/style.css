@@ -252,6 +252,7 @@ color: #006064;
     padding: 0;
     position: absolute;
 <<<<<<< HEAD
+<<<<<<< HEAD
     top: 33%;
 <<<<<<< HEAD
     left: 9%;
@@ -267,6 +268,13 @@ color: #006064;
     width: 62%;
     height: 45%;
     box-sizing: border-box;
+=======
+    top: 7%;
+    left: 19%;
+    width: 62%;
+    height: 45%;
+    box-sizing: border-box;
+>>>>>>> 76393e6ef00e5ef8c4b5ba070d022cbc91c12d6a
     overflow: scroll;
 }
 
@@ -277,6 +285,9 @@ color: #006064;
     font-family: 'Raleway', sans-serif;
     padding: 0;
     margin-bottom: 4em;
+<<<<<<< HEAD
+>>>>>>> 76393e6ef00e5ef8c4b5ba070d022cbc91c12d6a
+=======
 >>>>>>> 76393e6ef00e5ef8c4b5ba070d022cbc91c12d6a
 }
 

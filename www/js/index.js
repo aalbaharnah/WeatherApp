@@ -30,9 +30,14 @@ app.controller("MyWeatherController", function ($scope, $http, $timeout) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     $scope.cities = ['saihat', 'london', 'Al qatif'];
 
     /*
+=======
+
+    // function to add a city to the list in "favcity" page.
+>>>>>>> 76393e6ef00e5ef8c4b5ba070d022cbc91c12d6a
 =======
 
     // function to add a city to the list in "favcity" page.
@@ -45,6 +50,7 @@ app.controller("MyWeatherController", function ($scope, $http, $timeout) {
         if ($scope.cities.indexOf($scope.addIt) == -1) {
             $scope.cities.push($scope.addIt);
             localStorage.setItem('city', JSON.stringify($scope.cities));
+<<<<<<< HEAD
         } else {
             $scope.errtxt = 'The city is already in the list.'
         }
@@ -62,13 +68,19 @@ app.controller("MyWeatherController", function ($scope, $http, $timeout) {
         for (var i=0; i < localStorage.length; i++)
         if (localStorage.key(i) == null) {
             localStorage.setItem(i, $scope.addIt);
+=======
+>>>>>>> 76393e6ef00e5ef8c4b5ba070d022cbc91c12d6a
         } else {
             $scope.errtxt = 'The city is already in the list.'
         }
-
     }
+<<<<<<< HEAD
     
 
+=======
+
+    // Function to appoint favorite city in the list in "favcity" page.
+>>>>>>> 76393e6ef00e5ef8c4b5ba070d022cbc91c12d6a
 =======
 
     // Function to appoint favorite city in the list in "favcity" page.

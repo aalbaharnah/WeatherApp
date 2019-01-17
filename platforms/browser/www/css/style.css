@@ -247,8 +247,14 @@ body {
     position: absolute;
     top: 33%;
 <<<<<<< HEAD
+<<<<<<< HEAD
     left: 9%;
     width: 80%;
+=======
+    left: 5%;
+    width: 90%;
+    box-sizing: border-box;
+>>>>>>> 76393e6ef00e5ef8c4b5ba070d022cbc91c12d6a
 =======
     left: 5%;
     width: 90%;
@@ -308,6 +314,7 @@ body {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 main.ng-enter{
     transition: 0.5 linear all;
     opacity: 0;
@@ -316,6 +323,8 @@ main.ng-enter{
 main.ng-enter.ng-enter-active {
     opacity: 1;
 =======
+=======
+>>>>>>> 76393e6ef00e5ef8c4b5ba070d022cbc91c12d6a
     
 
 
@@ -329,6 +338,9 @@ main.ng-enter.ng-enter-active {
     100% {
         opacity: 1;
     }
+<<<<<<< HEAD
+>>>>>>> 76393e6ef00e5ef8c4b5ba070d022cbc91c12d6a
+=======
 >>>>>>> 76393e6ef00e5ef8c4b5ba070d022cbc91c12d6a
 }
 
