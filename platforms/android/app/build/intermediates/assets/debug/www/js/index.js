@@ -138,7 +138,7 @@ app.controller("MyWeatherController", function ($scope, $http, $timeout) {
     $scope.is_it_day = function () {
         if ($scope.cityDay === 0) {
             return {
-                "background-color": "#4DD0E1",
+                "background-color": "#0097A7",
                 "-webkit-transition": "background-color 2s ease-out",
                 "-moz-transition": " background-color 2s ease-out",
                 "-o-transition": "background-color 2s ease-out",

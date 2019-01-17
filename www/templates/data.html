@@ -15,55 +15,59 @@
                 <i class="far fa-compass fa-3x"></i>
             </div>
 
-            <!--City name & Tempreture-->
-            <div class="text-box">
-                <div ng-class="{'ani':loading}">
+
+            <div class="round">
+                <!--City name & Tempreture-->
+                <div class="text-box" ng-class="{'ani':loading}">
                     <div class="CityNameStyle">
                         {{cityData}}
-                    </div>
-                    <div class="CityTempStyle">
-                        {{cityTemp}}
-                    </div>
-                </div>
-            </div>
-
-            <!-- Icon -->
-            <div class="condition">
-                <div ng-class="{'ani':loading}">
-                    <div class="icon">
-                        <i ng-class="fontawsome"></i>
                     </div>
                     <div class="cCond">
                         {{ cityCondition }}
                     </div>
-                </div>
-            </div>
+                    
+                    <di class="mid">
+                        <div class="CityTempStyle">
+                            {{cityTemp}}
+                        </div>
+                        <div class="icon">
+                            <i ng-class="fontawsome"></i>
+                        </div>
+                    </div>
 
-            <!-- Humidity & wind speed and clouds-->
-            <div class="down-text-box">
-                <div class="col">
-                    Humidity: <br />
-                    <div ng-class="{'ani':loading}">
-                        <div class="CityHumidityStyle"> {{cityHumidity}} </div>
+                    
+                </div>
+
+
+                <!-- Humidity & wind speed and clouds-->
+                <div class="down-text-box">
+                    <div class="col">
+                        <i class="fas fa-tint"></i> <br />
+                        <div ng-class="{'ani':loading}">
+                            <div class="CityHumidityStyle"> {{cityHumidity}} </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <i class="fas fa-wind"></i>  <br />
+                        <div ng-class="{'ani':loading}">
+                            <div class="CityHumidityStyle"> {{cityWind}} </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col">
-                    Wind Speed: <br />
-                    <div ng-class="{'ani':loading}">
-                        <div class="CityHumidityStyle"> {{cityWind}} </div>
-                    </div>
-                </div>
+
+                <button class="share-btn" ng-click="share()">
+                    <i class="fas fa-share-alt"></i> Share
+                </button>
+
+                <button class="nav" ui-sref="favcity">
+                    <i class="fas fa-plus"></i> Add City
+                </button>
+
+
+
             </div>
-
-
-            <button class="share-btn" ng-click="share()">
-                <i class="fas fa-share-alt"></i> Share
-            </button>
-
-            <button class="nav" ui-sref="favcity">
-                <i class="fas fa-plus"></i> Add City
-            </button>
 
         </div>
     </div>

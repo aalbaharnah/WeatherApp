@@ -10,32 +10,34 @@
                 </a>
             </form>
 
-            <div class="list-type">
-                <ul class="ani">
-                    <li class="list-type" ng-repeat="x in cities">
-                        {{x}}
-                        <span ng-click="removeCity($index)" class="trashIcon">
-                            <i class="fas fa-trash-alt"></i>
-                        </span>
+            <div class="round">
+                <div class="list-type">
+                    <ul class="ani">
+                        <li class="list-type" ng-repeat="x in cities">
+                            {{ x | uppercase }}
+                            <span ng-click="removeCity($index)" class="trashIcon">
+                                <i class="fas fa-trash-alt"></i>
+                            </span>
 
-                        <span ng-click="favorCity($index)" class="starIcon">
-                            <i ng-class="{'far fa-star':getFav(x)==false, 'fas fa-star':getFav(x)}"></i>
-                        </span>
-                    </li>
-                    <div class="no-cities">
-                        <i ng-class="{'fab fa-creative-commons-zero fa-6x':cities.length == 0}"></i>
-                    </div>
-                </ul>
-             </div>
+                            <span ng-click="favorCity($index)" class="starIcon">
+                                <i ng-class="{'far fa-star':getFav(x)==false, 'fas fa-star':getFav(x)}"></i>
+                            </span>
+                        </li>
+                        <div class="no-cities">
+                            <i ng-class="{'fab fa-creative-commons-zero fa-6x':cities.length == 0}"></i>
+                        </div>
+                    </ul>
+                </div>
 
-            <p class="err">{{errtxt}}</p>
+                <p class="err">{{errtxt}}</p>
+            </div>
 
             <button class="share-btn" ng-click="share()">
                 <i class="fas fa-share-alt"></i> Share
             </button>
 
             <button class="nav" ui-sref="main">
-                    <i class="fas fa-chevron-left"></i> Back
+                <i class="fas fa-chevron-left"></i> Back
             </button>
 
         </div>

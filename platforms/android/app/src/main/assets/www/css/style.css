@@ -41,7 +41,7 @@ body {
 }
 .search-box {
     position: relative;
-    top: 10%;
+    top: 8%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: #006064;
@@ -85,13 +85,15 @@ body {
 
 /* Navigiation button at the upper center of the main page */
 .home {
-    color: #00838F;
+color: #006064;
     position: absolute;
-    left: 45%;
+    left: 39%;
     top: 18%;
     order: 2;
-    height: 50px;
-    width: 50px;
+    height: 85px;
+    width: 85px;
+
+    text-align: center;
 }
 .home:active {
     opacity: 0.4;
@@ -99,18 +101,18 @@ body {
     transition-duration: 0.1s;
 }
 
-
 .ani {
     animation: fadeInDown 0.2s ease-out;
 }
 
 /* Box that has City Name and Tempreture */
 .text-box{
-    left: 8%;
+    left: 28%;
     position: absolute;
-    top: 33%;
-    height: 40%;
-    width: 55%;
+    text-align: center;
+    top: 2%;
+    height: 59%;
+    width: 43%;
     display: flex;
     flex-flow: column;
     order: 3;
@@ -125,18 +127,21 @@ body {
     font-size: 9vw;
     letter-spacing: 0.1rem;
 }
-.CityTempStyle  {
-    line-height: 10rem;
-    padding : 5%;
-    color: #00838F;
-    font-weight: 700;
-    font-size: 24vw;
-    letter-spacing: .1rem;
-    transition: .6s;
-    backface-visibility: hidden;
-    align-self: center;
+
+
+.mid{
+    display: flex;
+    flex-flow: row;
+    align-items: baseline;
+    justify-content: center;
 }
 
+.CityTempStyle  {
+     padding: 3%;
+     color: #00838F;
+     /* font-weight: 700; */
+     font-size: 24vw;
+}
 .condition{
     position: absolute;
     left: 57%;
@@ -150,9 +155,11 @@ body {
 .icon{
     height: 35%;
     position: relative;
-    color: #00B8D4;
+    color: #00838F;
     margin-bottom: 20px;
+    padding: 3%;
 }
+
 .cCond{
     position: relative;
     padding: 5%;
@@ -178,6 +185,7 @@ body {
     text-align: center;
     position: relative;
     margin: auto;
+    color: #00B8D4;
 }
 
 .CityHumidityStyle {
@@ -198,7 +206,7 @@ body {
     border: 2px solid #00ACC1;
     background-color: none;
     order: 20;
-    height: 36px;
+    height: 40px;
     width: 40%;
     text-align: center;
     display: inline-block;
@@ -218,7 +226,7 @@ body {
     left: 50%;
     color: white;
     order: 20;
-    height: 36px;
+    height: 40px;
     width: 40%;
     background-color: #00ACC1;
     text-align: center;
@@ -232,7 +240,7 @@ body {
 
 .no-cities {
     color: #00B8D4;
-    left: 35%;
+    left: 42%;
     position: absolute;
     opacity: 0.5;
 }
@@ -243,14 +251,16 @@ body {
     list-style-type: none;
     padding: 0;
     position: absolute;
-    top: 33%;
-    left: 5%;
-    width: 90%;
+    top: 7%;
+    left: 19%;
+    width: 62%;
+    height: 45%;
     box-sizing: border-box;
+    overflow: scroll;
 }
 
+
 .list-type ul {
-    counter-reset: li;
     list-style: none;
     font-size: 15px;
     font-family: 'Raleway', sans-serif;
@@ -258,8 +268,11 @@ body {
     margin-bottom: 4em;
 }
 
-.list-type ul ul {
-    margin: 0 0 0 2em;
+.list-type ul.ng-leave {
+    opacity: 1;
+}
+.list-type ul.ng-leave.ng-leave-active {
+    opacity: 0;
 }
 
 .list-type li{
@@ -268,9 +281,8 @@ body {
     padding: 8px 16px;
     margin: .5em 0em;
     height: 48px;
-    color: #444;
+    color: #00838F;
     text-decoration: none;
-    text-transform: uppercase;
     font-size: 16px;
     animation: fadeInDown 0.5s ease-out;
     border-bottom: 1px solid rgb(190, 189, 189);
@@ -313,7 +325,16 @@ body {
     padding-right: 10%;
     left: 7%;
 }
-    
+
+.round {
+    background-color: white;
+    position: absolute;
+    width: 240%;
+    height: 100%;
+    border-radius: 50%;
+    top: 28%;
+    right: -71%;
+}
 
 
 @keyframes fadeInDown {
