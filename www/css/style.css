@@ -260,15 +260,6 @@ body {
     color: #ffe6e6;
 }
 
-<<<<<<< HEAD
-main.ng-enter{
-    transition: 0.5 linear all;
-    opacity: 0;
-}
-
-main.ng-enter.ng-enter-active {
-    opacity: 1;
-=======
 .nav{
     position: absolute;
     top: 89%;
@@ -297,7 +288,6 @@ main.ng-enter.ng-enter-active {
     100% {
         opacity: 1;
     }
->>>>>>> accc623f1112390e3aab06c71d461ebca3f9cdbc
 }
 
 @keyframes fadeIn {
