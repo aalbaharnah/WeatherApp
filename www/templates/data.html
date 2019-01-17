@@ -3,12 +3,12 @@
         <div class="box-container" ng-style="is_it_day()">
 
             <!--Search box-->
-            <div class="search-box">
+            <form class="search-box" ng-submit="search()">
                 <input class="search-txt" type="text" placeholder="City ..." ng-model="cityName">
                 <a class="search-btn" ng-click="search()">
                     <i class="fas fa-search fa-2x"></i>
                 </a>
-            </div>
+            </form>
 
             <!--Get home-->
             <div class="home" ng-click="getMeHome()">
