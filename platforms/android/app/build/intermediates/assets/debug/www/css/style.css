@@ -95,13 +95,13 @@ body {
 }
 .home:active {
     opacity: 0.4;
-    transform: rotate(60deg);
+    transform: rotate(30deg);
     transition-duration: 0.1s;
 }
 
 
 .ani {
-    animation: fadeInDown 0.5s ease-out;
+    animation: fadeInDown 0.2s ease-out;
 }
 
 /* Box that has City Name and Tempreture */
@@ -266,7 +266,7 @@ body {
     position: relative;
     display: block;
     padding: 8px 16px;
-    margin: .5em .5em;
+    margin: .5em 0em;
     height: 48px;
     color: #444;
     text-decoration: none;
