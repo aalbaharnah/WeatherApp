@@ -61,6 +61,8 @@ app.controller("MyWeatherController", function ($scope, $http, $timeout) {
         localStorage.setItem('city' , JSON.stringify($scope.cities));
     }
 
+    
+
     // Function to favor a city in the list in "favcity" page.
     $scope.favorCity = function (x) {
         localStorage.setItem('name', $scope.cities[x]);
