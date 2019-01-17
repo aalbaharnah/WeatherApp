@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Jan 17 11:30:17 AST 2019
+#Thu Jan 17 11:46:46 AST 2019
 17.baseType=DIRECTORY
 4.path=www/js/angular-animate.min.js
 22.set=ASSET
