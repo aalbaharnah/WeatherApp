@@ -33,10 +33,10 @@
     "is_top_level": false,
     "variables": {}
   },
-  "cordova-plugin-native-keyboard": {
+  "cordova-plugin-keyboard": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-native-keyboard"
+      "id": "cordova-plugin-keyboard"
     },
     "is_top_level": true,
     "variables": {}

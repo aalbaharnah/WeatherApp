@@ -121,7 +121,6 @@ body {
     width: 33.33%;
     text-align: center;
     flex-grow: 2;
-    
 }
 .home:active {
     opacity: 0.4;

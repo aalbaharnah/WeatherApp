@@ -121,14 +121,11 @@ body {
     width: 33.33%;
     text-align: center;
     flex-grow: 2;
-    text-shadow: .5px .5px 70px white;
-    
 }
 .home:active {
     opacity: 0.4;
     transform: rotate(40deg);
     transition-duration: 0.4s;
-    text-shadow: .5px .5px 70px white;
 }
 
 

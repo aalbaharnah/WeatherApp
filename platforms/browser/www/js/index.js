@@ -155,4 +155,10 @@ app.controller("MyWeatherController", function ($scope, $http, $timeout) {
             window.plugins.socialsharing.share('City Name: ' + $scope.cityData + ', condition: ' + $scope.cityCondition + ', temperature: ' + $scope.cityTemp, null, 'http:' + $scope.cityIcon, null);
         }, false);
     }
+
+    $scope.hideKeyboard = function () {
+        document.addEventListener("deviceready", function(){
+            window.hideKeyboard()
+        });
+    }
 });

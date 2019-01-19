@@ -39,8 +39,10 @@ app.controller("MyWeatherController", function ($scope, $http, $timeout) {
         if ($scope.cities.indexOf($scope.addIt) == -1) {
             $scope.cities.push($scope.addIt);
             localStorage.setItem('city', JSON.stringify($scope.cities));
+            $scope.hideKeyboard();
         } else {
             $scope.errtxt = 'The city is already in the list.'
+            $scope.hideKeyboard();
         }
     }
 
@@ -131,6 +133,7 @@ app.controller("MyWeatherController", function ($scope, $http, $timeout) {
     $scope.cityName = '';
     $scope.search = function () {
         $scope.getAllData($scope.cityName);
+        $scope.hideKeyboard();
     }
 
 
@@ -154,5 +157,12 @@ app.controller("MyWeatherController", function ($scope, $http, $timeout) {
         document.addEventListener("deviceready", function () {
             window.plugins.socialsharing.share('City Name: ' + $scope.cityData + ', condition: ' + $scope.cityCondition + ', temperature: ' + $scope.cityTemp, null, 'http:' + $scope.cityIcon, null);
         }, false);
+    }
+
+    $scope.hideKeyboard = function () {
+        document.addEventListener("deviceready", function(){
+            console.log("Keyboard hide");
+            Keyboard.hide();
+        });
     }
 });

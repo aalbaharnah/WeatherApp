@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="NativeKeyboardPluginLicense">TRIAL</string>
-    <string name="NativeKeyboardPluginLicenseAlt">TRIAL</string>
     <string name="activity_name">@string/launcher_name</string>
     <string name="app_name">weatherapp</string>
     <string name="fa_adjust"></string>

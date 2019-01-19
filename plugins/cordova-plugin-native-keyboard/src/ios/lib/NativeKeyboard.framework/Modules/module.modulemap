@@ -1,6 +1,0 @@
-framework module NativeKeyboard {
-  umbrella header "NativeKeyboard.h"
-
-  export *
-  module * { export * }
-}

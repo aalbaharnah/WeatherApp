@@ -10,16 +10,14 @@
     "cordova-plugin-geolocation": {
       "PACKAGE_NAME": "sa.albaharnah.ali.weatherapp"
     },
-    "cordova-plugin-native-keyboard": {
-      "LICENSE": "TRIAL",
-      "LIC_ANDROID": "TRIAL",
-      "PACKAGE_NAME": "sa.albaharnah.ali.weatherapp"
-    },
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "sa.albaharnah.ali.weatherapp"
     },
     "cordova-plugin-x-socialsharing": {
       "ANDROID_SUPPORT_V4_VERSION": "24.1.1+",
+      "PACKAGE_NAME": "sa.albaharnah.ali.weatherapp"
+    },
+    "cordova-plugin-keyboard": {
       "PACKAGE_NAME": "sa.albaharnah.ali.weatherapp"
     }
   },
