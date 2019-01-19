@@ -19,7 +19,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 app.controller("MyWeatherController", function ($scope, $http, $timeout) {
 
     // Get cities from localStorage.
-    if (localStorage.city){
+    if (localStorage.city) {
         console.log('yes');
         $scope.cities = JSON.parse(localStorage.city);
     } else {
@@ -27,21 +27,10 @@ app.controller("MyWeatherController", function ($scope, $http, $timeout) {
         var json = JSON.stringify(init_cities);
         localStorage.setItem('city', json);
     }
-    
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    $scope.cities = ['saihat', 'london', 'Al qatif'];
 
-    /*
-=======
-    
+
     // function to add a city to the list in "favcity" page.
->>>>>>> 76393e6ef00e5ef8c4b5ba070d022cbc91c12d6a
-=======
-    
-    // function to add a city to the list in "favcity" page.
->>>>>>> 76393e6ef00e5ef8c4b5ba070d022cbc91c12d6a
     $scope.addCity = function () {
         $scope.errtxt = '';
         if (!$scope.addIt) {
@@ -49,42 +38,13 @@ app.controller("MyWeatherController", function ($scope, $http, $timeout) {
         }
         if ($scope.cities.indexOf($scope.addIt) == -1) {
             $scope.cities.push($scope.addIt);
-            localStorage.setItem('city' , JSON.stringify($scope.cities));
-<<<<<<< HEAD
+            localStorage.setItem('city', JSON.stringify($scope.cities));
         } else {
             $scope.errtxt = 'The city is already in the list.'
         }
     }
-<<<<<<< HEAD
-    */
-    
-
-    
-    $scope.addToStorage = function () {
-        $scope.errtxt = '';
-        if (!$scope.addIt) {
-            return;
-        }
-        for (var i=0; i < localStorage.length; i++)
-        if (localStorage.key(i) == null) {
-            localStorage.setItem(i, $scope.addIt);
-=======
->>>>>>> 76393e6ef00e5ef8c4b5ba070d022cbc91c12d6a
-        } else {
-            $scope.errtxt = 'The city is already in the list.'
-        }
-    }
-<<<<<<< HEAD
-    
-
-=======
 
     // Function to appoint favorite city in the list in "favcity" page.
->>>>>>> 76393e6ef00e5ef8c4b5ba070d022cbc91c12d6a
-=======
-
-    // Function to appoint favorite city in the list in "favcity" page.
->>>>>>> 76393e6ef00e5ef8c4b5ba070d022cbc91c12d6a
     $scope.getFav = function (city) {
         var fav = localStorage.getItem("name");
         if (fav == city) {
@@ -98,8 +58,10 @@ app.controller("MyWeatherController", function ($scope, $http, $timeout) {
     // Function to remove a city from the list in "favcity" page.
     $scope.removeCity = function (x) {
         $scope.cities.splice(x, 1);
-        localStorage.setItem('city' , JSON.stringify($scope.cities));
+        localStorage.setItem('city', JSON.stringify($scope.cities));
     }
+
+
 
     // Function to favor a city in the list in "favcity" page.
     $scope.favorCity = function (x) {
@@ -128,19 +90,18 @@ app.controller("MyWeatherController", function ($scope, $http, $timeout) {
                 $scope.cityCondition = response.data.current.condition.text;
                 $scope.cityDay = response.data.current.is_day;
                 $scope.code = response.data.current.condition.code;
-                $http.get('../json/weather_icons.json').then(function(res){
-                    for (var i=0; i<res.data.length; i++){
-                        if (res.data[i].code == $scope.code){
-                            $scope.fontawsome =  res.data[i].icon + ' fa-4x';
-                        }
+                for (var i = 0; i < forcast.length; i++) {
+                    if (forcast[i].code == $scope.code) {
+                        $scope.fontawsome = forcast[i].icon + ' fa-4x';
                     }
-                });
+                }
+
             });
     }
 
     // The normal state of showing the fav city in main page.
     $scope.getAllData(localStorage.getItem('name'));
-    
+
     // Function to get user current location.
     $scope.getMeHome = function () {
         if (navigator.geolocation) {
@@ -171,13 +132,13 @@ app.controller("MyWeatherController", function ($scope, $http, $timeout) {
     $scope.search = function () {
         $scope.getAllData($scope.cityName);
     }
-    
+
 
     // Function to transition the backgroun based on the timing of the city.
     $scope.is_it_day = function () {
         if ($scope.cityDay === 0) {
             return {
-                "background-color": "#4DD0E1",
+                "background-color": "#0097A7",
                 "-webkit-transition": "background-color 2s ease-out",
                 "-moz-transition": " background-color 2s ease-out",
                 "-o-transition": "background-color 2s ease-out",
@@ -190,8 +151,8 @@ app.controller("MyWeatherController", function ($scope, $http, $timeout) {
 
     // Function to active the click button to share.  
     $scope.share = function () {
-        document.addEventListener("deviceready", function(){
-            window.plugins.socialsharing.share('City Name: '+ $scope.cityData + ', condition: ' + $scope.cityCondition + ', temperature: ' + $scope.cityTemp, null, 'http:'+$scope.cityIcon, null);
+        document.addEventListener("deviceready", function () {
+            window.plugins.socialsharing.share('City Name: ' + $scope.cityData + ', condition: ' + $scope.cityCondition + ', temperature: ' + $scope.cityTemp, null, 'http:' + $scope.cityIcon, null);
         }, false);
     }
 });

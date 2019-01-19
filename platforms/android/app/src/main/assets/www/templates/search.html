@@ -10,6 +10,19 @@
                 </a>
             </form>
 
+
+            <div class="top-nav">
+                <div class="share-btn" ng-click="share()">
+                    <i class="fas fa-share-alt"></i>
+                </div>
+                <div class="home">
+                </div>
+                <div class="nav" ui-sref="main">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+            </div>
+
+
             <div class="round">
                 <div class="list-type">
                     <ul class="ani">
@@ -31,14 +44,6 @@
 
                 <p class="err">{{errtxt}}</p>
             </div>
-
-            <button class="share-btn" ng-click="share()">
-                <i class="fas fa-share-alt"></i> Share
-            </button>
-
-            <button class="nav" ui-sref="main">
-                <i class="fas fa-chevron-left"></i> Back
-            </button>
 
         </div>
     </div>

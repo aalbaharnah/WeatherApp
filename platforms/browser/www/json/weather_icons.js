@@ -1,4 +1,4 @@
-[
+var forcast = [
 	{
 		"code": 1000,
 		"day": "Sunny",

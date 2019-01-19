@@ -11,8 +11,16 @@
             </form>
 
             <!--Get home-->
-            <div class="home" ng-click="getMeHome()">
-                <i class="far fa-compass fa-3x"></i>
+            <div class="top-nav">
+                <div class="share-btn" ng-click="share()">
+                    <i class="fas fa-share-alt"></i>
+                </div>
+                <div class="home" ng-click="getMeHome()">
+                    <i class="far fa-compass fa-3x"></i>
+                </div>
+                <div class="nav" ui-sref="favcity">
+                    <i class="fas fa-plus"></i>
+                </div>
             </div>
 
 
@@ -56,14 +64,6 @@
                     </div>
                 </div>
 
-
-                <button class="share-btn" ng-click="share()">
-                    <i class="fas fa-share-alt"></i> Share
-                </button>
-
-                <button class="nav" ui-sref="favcity">
-                    <i class="fas fa-plus"></i> Add City
-                </button>
 
 
 
