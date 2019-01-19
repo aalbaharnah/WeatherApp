@@ -1,1 +1,1 @@
-[{"outputType":{"type":"APK"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":10000},"path":"app-debug.apk","properties":{"packageId":"sa.albaharnah.ali.weatherapp","split":"","minSdkVersion":"19"}}]
+[{"outputType":{"type":"APK"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":10000},"path":"app-debug.apk","properties":{"packageId":"sa.albaharnah.ali.weatherapp","split":"","minSdkVersion":"16"}}]

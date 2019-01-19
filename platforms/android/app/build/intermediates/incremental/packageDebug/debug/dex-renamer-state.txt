@@ -1,4 +1,4 @@
-#Sat Jan 19 09:50:50 AST 2019
+#Sat Jan 19 13:19:00 AST 2019
 base.0=/home/ali/Projects/WeatherApp/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
-path.0=classes.dex
 renamed.0=classes.dex
+file.0=/home/ali/Projects/WeatherApp/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex

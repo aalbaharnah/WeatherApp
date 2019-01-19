@@ -34,5 +34,5 @@
         <variable name="ANDROID_SUPPORT_V4_VERSION" value="24.1.1+" />
     </plugin>
     <engine name="browser" spec="^5.0.4" />
-    <engine name="android" spec="^7.1.4" />
+    <engine name="android" spec="^7.0.0" />
 </widget>

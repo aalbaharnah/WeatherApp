@@ -47,6 +47,10 @@
               "count": 1
             },
             {
+              "xml": "<feature name=\"NativeKeyboard\"><param name=\"android-package\" value=\"nl.xservices.plugins.nativekeyboard.NativeKeyboard\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
               "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
               "count": 1
             },
@@ -56,11 +60,44 @@
             }
           ]
         }
+      },
+      "res/values/nativekeyboard.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<string name=\"NativeKeyboardPluginLicense\">TRIAL</string>",
+              "count": 1
+            },
+            {
+              "xml": "<string name=\"NativeKeyboardPluginLicenseAlt\">TRIAL</string>",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "app/src/main/res/values/nativekeyboard.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<string name=\"NativeKeyboardPluginLicense\">TRIAL</string>",
+              "count": 1
+            },
+            {
+              "xml": "<string name=\"NativeKeyboardPluginLicenseAlt\">TRIAL</string>",
+              "count": 1
+            }
+          ]
+        }
       }
     }
   },
   "installed_plugins": {
     "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "sa.albaharnah.ali.weatherapp"
+    },
+    "cordova-plugin-native-keyboard": {
+      "LICENSE": "TRIAL",
+      "LIC_ANDROID": "TRIAL",
       "PACKAGE_NAME": "sa.albaharnah.ali.weatherapp"
     },
     "cordova-plugin-whitelist": {
@@ -91,6 +128,14 @@
       "runs": true
     },
     {
+      "id": "cordova-plugin-native-keyboard.NativeKeyboard",
+      "file": "plugins/cordova-plugin-native-keyboard/www/NativeKeyboard.js",
+      "pluginId": "cordova-plugin-native-keyboard",
+      "clobbers": [
+        "window.NativeKeyboard"
+      ]
+    },
+    {
       "id": "es6-promise-plugin.Promise",
       "file": "plugins/es6-promise-plugin/www/promise.js",
       "pluginId": "es6-promise-plugin",
@@ -107,6 +152,7 @@
   ],
   "plugin_metadata": {
     "cordova-plugin-geolocation": "4.0.1",
+    "cordova-plugin-native-keyboard": "1.6.0",
     "cordova-plugin-whitelist": "1.3.3",
     "es6-promise-plugin": "4.2.2",
     "cordova-plugin-x-socialsharing": "5.4.4"

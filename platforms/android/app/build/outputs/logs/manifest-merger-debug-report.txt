@@ -15,7 +15,7 @@ ADDED from /home/ali/Projects/WeatherApp/platforms/android/app/src/main/AndroidM
 INJECTED from /home/ali/Projects/WeatherApp/platforms/android/app/src/main/AndroidManifest.xml:2:1-26:12
 INJECTED from /home/ali/Projects/WeatherApp/platforms/android/app/src/main/AndroidManifest.xml:2:1-26:12
 INJECTED from /home/ali/Projects/WeatherApp/platforms/android/app/src/main/AndroidManifest.xml:2:1-26:12
-MERGED from [com.android.support:support-v4:24.1.1] /home/ali/.gradle/caches/transforms-1/files-1.1/support-v4-24.1.1.aar/9581bf8941b4d5e96be69027ffa9a933/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-v4:24.1.1] /home/ali/.gradle/caches/transforms-1/files-1.1/support-v4-24.1.1.aar/0bc6477dfd418d21fe237e6026ca77f3/AndroidManifest.xml:17:1-27:12
 MERGED from [:CordovaLib] /home/ali/Projects/WeatherApp/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:20:1-27:12
 INJECTED from /home/ali/Projects/WeatherApp/platforms/android/app/src/main/AndroidManifest.xml:2:1-26:12
 INJECTED from /home/ali/Projects/WeatherApp/platforms/android/app/src/main/AndroidManifest.xml:2:1-26:12
@@ -56,8 +56,8 @@ ADDED from /home/ali/Projects/WeatherApp/platforms/android/app/src/main/AndroidM
 		ADDED from /home/ali/Projects/WeatherApp/platforms/android/app/src/main/AndroidManifest.xml:4:22-64
 application
 ADDED from /home/ali/Projects/WeatherApp/platforms/android/app/src/main/AndroidManifest.xml:5:5-20:19
-MERGED from [com.android.support:support-v4:24.1.1] /home/ali/.gradle/caches/transforms-1/files-1.1/support-v4-24.1.1.aar/9581bf8941b4d5e96be69027ffa9a933/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-v4:24.1.1] /home/ali/.gradle/caches/transforms-1/files-1.1/support-v4-24.1.1.aar/9581bf8941b4d5e96be69027ffa9a933/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.1.1] /home/ali/.gradle/caches/transforms-1/files-1.1/support-v4-24.1.1.aar/0bc6477dfd418d21fe237e6026ca77f3/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.1.1] /home/ali/.gradle/caches/transforms-1/files-1.1/support-v4-24.1.1.aar/0bc6477dfd418d21fe237e6026ca77f3/AndroidManifest.xml:25:5-20
 	android:supportsRtl
 		ADDED from /home/ali/Projects/WeatherApp/platforms/android/app/src/main/AndroidManifest.xml:5:114-140
 	android:label
@@ -106,20 +106,16 @@ ADDED from /home/ali/Projects/WeatherApp/platforms/android/app/src/main/AndroidM
 		ADDED from /home/ali/Projects/WeatherApp/platforms/android/app/src/main/AndroidManifest.xml:14:25-66
 uses-sdk
 ADDED from /home/ali/Projects/WeatherApp/platforms/android/app/src/main/AndroidManifest.xml:21:5-74
-INJECTED from /home/ali/Projects/WeatherApp/platforms/android/app/src/main/AndroidManifest.xml:21:5-74
-MERGED from [com.android.support:support-v4:24.1.1] /home/ali/.gradle/caches/transforms-1/files-1.1/support-v4-24.1.1.aar/9581bf8941b4d5e96be69027ffa9a933/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-v4:24.1.1] /home/ali/.gradle/caches/transforms-1/files-1.1/support-v4-24.1.1.aar/9581bf8941b4d5e96be69027ffa9a933/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:24.1.1] /home/ali/.gradle/caches/transforms-1/files-1.1/support-v4-24.1.1.aar/0bc6477dfd418d21fe237e6026ca77f3/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:24.1.1] /home/ali/.gradle/caches/transforms-1/files-1.1/support-v4-24.1.1.aar/0bc6477dfd418d21fe237e6026ca77f3/AndroidManifest.xml:21:5-23:54
 MERGED from [:CordovaLib] /home/ali/Projects/WeatherApp/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:25:5-44
 MERGED from [:CordovaLib] /home/ali/Projects/WeatherApp/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:25:5-44
-INJECTED from /home/ali/Projects/WeatherApp/platforms/android/app/src/main/AndroidManifest.xml:21:5-74
 	tools:overrideLibrary
-		ADDED from [com.android.support:support-v4:24.1.1] /home/ali/.gradle/caches/transforms-1/files-1.1/support-v4-24.1.1.aar/9581bf8941b4d5e96be69027ffa9a933/AndroidManifest.xml:23:9-51
+		ADDED from [com.android.support:support-v4:24.1.1] /home/ali/.gradle/caches/transforms-1/files-1.1/support-v4-24.1.1.aar/0bc6477dfd418d21fe237e6026ca77f3/AndroidManifest.xml:23:9-51
 	android:targetSdkVersion
 		ADDED from /home/ali/Projects/WeatherApp/platforms/android/app/src/main/AndroidManifest.xml:21:42-71
 	android:minSdkVersion
 		ADDED from /home/ali/Projects/WeatherApp/platforms/android/app/src/main/AndroidManifest.xml:21:15-41
-		INJECTED from /home/ali/Projects/WeatherApp/platforms/android/app/src/main/AndroidManifest.xml
-		INJECTED from /home/ali/Projects/WeatherApp/platforms/android/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
 ADDED from /home/ali/Projects/WeatherApp/platforms/android/app/src/main/AndroidManifest.xml:22:5-81
 	android:name
