@@ -2,7 +2,7 @@
     <div class="page-ani">
         <div class="box-container" ng-style="is_it_day()">
 
-            <!--Search box-->
+            <!-- City input box -->
             <form class="search-box" ng-submit="addCity()">
                 <input class="search-txt" type="text" placeholder="Add a city .." ng-model="addIt">
                 <a class="search-btn" ng-click="addCity()">
@@ -10,7 +10,7 @@
                 </a>
             </form>
 
-
+            <!-- Top Navigators -->
             <div class="top-nav">
                 <div class="share-btn" ng-click="share()">
                     <i class="fas fa-share-alt"></i>
@@ -22,8 +22,9 @@
                 </div>
             </div>
 
-
+            
             <div class="round">
+                <!-- List of the favorate cities -->
                 <div class="list-type">
                     <ul class="ani">
                         <li class="list-type" ng-repeat="x in cities">
@@ -41,7 +42,6 @@
                         </div>
                     </ul>
                 </div>
-
                 <p class="err">{{errtxt}}</p>
             </div>
 

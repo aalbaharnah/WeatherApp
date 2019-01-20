@@ -82,7 +82,6 @@ app.controller("MyWeatherController", function ($scope, $http, $timeout) {
                 $timeout(function () {
                     $scope.loading = false;
                 }, 1100)
-
                 console.log(response.data); // retreaving data from API.
                 $scope.cityData = response.data.location.name;
                 $scope.cityTemp = response.data.current.temp_c + '°';
@@ -159,6 +158,7 @@ app.controller("MyWeatherController", function ($scope, $http, $timeout) {
         }, false);
     }
 
+    // Function to hid android keyboard after typing.
     $scope.hideKeyboard = function () {
         document.addEventListener("deviceready", function(){
             console.log("Keyboard hide");

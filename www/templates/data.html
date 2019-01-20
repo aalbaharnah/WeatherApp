@@ -2,7 +2,7 @@
     <div class="page-ani">
         <div class="box-container" ng-style="is_it_day()">
 
-            <!--Search box-->
+            <!-- Search box -->
             <form class="search-box" ng-submit="search()">
                 <input class="search-txt" type="text" placeholder="City ..." ng-model="cityName">
                 <a class="search-btn" ng-click="search()">
@@ -10,7 +10,7 @@
                 </a>
             </form>
 
-            <!--Get home-->
+            <!-- Top Navigators -->
             <div class="top-nav">
                 <div class="share-btn" ng-click="share()">
                     <i class="fas fa-share-alt"></i>
@@ -43,7 +43,6 @@
                         </div>
                     </div>
 
-                    
                 </div>
 
 
@@ -55,7 +54,6 @@
                             <div class="CityHumidityStyle"> {{cityHumidity}} </div>
                         </div>
                     </div>
-
                     <div class="col">
                         <i class="fas fa-wind"></i>  <br />
                         <div ng-class="{'ani':loading}">
@@ -63,9 +61,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
 
             </div>
 
